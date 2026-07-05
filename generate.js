@@ -10,7 +10,7 @@ const crypto = require("crypto");
 // 1. 상태 결정 (순수 함수, 단위 테스트 대상)
 // ---------------------------------------------------------------------------
 
-const STREAK_MILESTONES = [7, 30, 100, 365];
+const STREAK_MILESTONES = [5, 10, 30, 50, 70, 100, 365];
 
 /**
  * 커밋량이 많을수록 활동적인 장면이 나온다.
@@ -22,13 +22,13 @@ const STREAK_MILESTONES = [7, 30, 100, 365];
 function decideState(stats, seed, event = null) {
   const { today, week, streak } = stats;
 
-  if (event === "push") return "greet";        // 방금 푸시: 달려와서 반김
-  if (week === 0) return "sleepy";              // 일주일 내내 0: 동면
+  if (event === "push") return "greet"; // 방금 푸시: 달려와서 반김
+  if (week === 0) return "sleepy"; // 일주일 내내 0: 동면
   if (STREAK_MILESTONES.includes(streak)) return "celebrate"; // 스트릭 기념일
-  if (today >= 10) return "zoomies";
-  if (today >= 4) return "active";
+  if (today >= 20) return "zoomies";
+  if (today >= 10) return "active";
   if (today >= 1) return "normal";
-  return "calm";                                // 오늘 0, 주간 커밋은 있음
+  return "calm"; // 오늘 0, 주간 커밋은 있음
 }
 
 // ---------------------------------------------------------------------------
@@ -80,8 +80,13 @@ async function fetchCalendar(username, token) {
   if (!res.ok) throw new Error(`GitHub API ${res.status}: ${await res.text()}`);
   const json = await res.json();
   if (json.errors) throw new Error(JSON.stringify(json.errors));
-  return json.data.user.contributionsCollection.contributionCalendar.weeks
-    .flatMap((w) => w.contributionDays.map((d) => ({ date: d.date, count: d.contributionCount })));
+  return json.data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
+    (w) =>
+      w.contributionDays.map((d) => ({
+        date: d.date,
+        count: d.contributionCount,
+      })),
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -138,7 +143,9 @@ async function main() {
   } else {
     const token = process.env.GITHUB_TOKEN;
     if (!process.env.GITHUB_USERNAME || !token) {
-      console.error("GITHUB_USERNAME과 GITHUB_TOKEN을 설정하세요 (또는 --mock 사용)");
+      console.error(
+        "GITHUB_USERNAME과 GITHUB_TOKEN을 설정하세요 (또는 --mock 사용)",
+      );
       process.exit(1);
     }
     stats = computeStats(await fetchCalendar(username, token), todayISO);
@@ -152,10 +159,17 @@ async function main() {
   // 시드에 시간을 넣어 실행 시각마다 장면 변형이 바뀌게 한다
   const scene = sceneFor(state, `${username}:${todayISO}:${now.getUTCHours()}`);
   fs.writeFileSync(path.join(dist, "dog.svg"), composeScene(scene));
-  fs.writeFileSync(path.join(dist, "stats.svg"), makeStatsSvg(stats, state, todayISO));
+  fs.writeFileSync(
+    path.join(dist, "stats.svg"),
+    makeStatsSvg(stats, state, todayISO),
+  );
 
   console.log(JSON.stringify({ todayISO, ...stats, state }, null, 2));
 }
 
 module.exports = { decideState, computeStats };
-if (require.main === module) main().catch((e) => { console.error(e); process.exit(1); });
+if (require.main === module)
+  main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
