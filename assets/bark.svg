@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 120" width="100%" height="100%">
+  <!-- 2. 제자리에 서서 짖기 (기존 베이스 모델 유지 + 입 벌림 애니메이션) -->
+  <!-- 중앙에 배치 (translate 360, 46) -->
+  <g transform="translate(360, 46)">
+    
+    <!-- 고정된 바닥 그림자 -->
+    <ellipse cx="84" cy="70" rx="82" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- 짖는 반동으로 몸이 가볍게 들썩임 (0.8초 주기) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0" keyTimes="0;0.5;1" dur="0.8s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 매우 빠르게 흔드는 꼬리 (0.2초 주기) -->
+      <g>
+        <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.2s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="0" y="12" width="6" height="6" fill="#A0672F"/>
+        <rect x="6" y="18" width="6" height="6" fill="#A0672F"/>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.2s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="0" y="6" width="6" height="6" fill="#A0672F"/>
+        <rect x="6" y="12" width="6" height="6" fill="#A0672F"/>
+      </g>
+      <rect x="12" y="24" width="6" height="6" fill="#A0672F"/>
+
+      <!-- 긴 몸통 (기존 베이스 완전 동일) -->
+      <rect x="12" y="30" width="120" height="24" fill="#A0672F"/>
+      <rect x="24" y="48" width="96" height="6" fill="#D9B285"/>
+
+      <!-- 머리 상단부 (기존 베이스 완전 동일) -->
+      <rect x="120" y="12" width="30" height="24" fill="#A0672F"/> <!-- 머리 -->
+      <rect x="120" y="18" width="12" height="18" fill="#6B4423"/> <!-- 귀 -->
+      <rect x="150" y="18" width="12" height="6" fill="#A0672F"/>  <!-- 윗 주둥이 -->
+      <rect x="162" y="18" width="6" height="6" fill="#2E1F14"/>   <!-- 코 -->
+      <rect x="138" y="18" width="6" height="6" fill="#2E1F14"/>   <!-- 눈 -->
+
+      <!-- 짖기 애니메이션: 입 벌림 + 짖음 표시 -->
+      <!-- 입 다문 상태 (프레임 1) -->
+      <g>
+        <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.8s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="150" y="24" width="18" height="6" fill="#D9B285"/>
+      </g>
+      <!-- 입 벌린 상태 + 짖음 파티클 (프레임 2) -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.8s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="144" y="30" width="18" height="6" fill="#D9B285"/> <!-- 아래로 떨어진 턱 -->
+        
+        <!-- 짖음 표시(Bark line) -->
+        <rect x="174" y="12" width="6" height="6" fill="#2E1F14"/>
+        <rect x="186" y="6" width="6" height="18" fill="#2E1F14"/>
+      </g>
+    </g>
+
+    <!-- 고정된 짧은 다리 (기존 걷기 베이스의 A프레임 다리 정지 상태) -->
+    <rect x="18" y="54" width="12" height="6" fill="#A0672F"/><rect x="18" y="60" width="12" height="6" fill="#D9B285"/>
+    <rect x="36" y="54" width="12" height="6" fill="#6B4423"/><rect x="102" y="54" width="12" height="6" fill="#6B4423"/>
+    <rect x="120" y="54" width="12" height="6" fill="#A0672F"/><rect x="120" y="60" width="12" height="6" fill="#D9B285"/>
+  </g>
+</svg>

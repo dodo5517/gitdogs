@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 120" width="100%" height="100%">
+  <!-- 2. 바닥에 완전히 엎드린 닥스훈트 (초미니 다리 스플루트 자세) -->
+  <!-- 색상: 브라운 #A0672F, 진갈색 #6B4423, 탠 #D9B285, 눈/코 #2E1F14 -->
+  <g transform="translate(340, 20)">
+    
+    <!-- 바닥 그림자 -->
+    <ellipse cx="90" cy="80" rx="90" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- 바닥에 뻗은 극단적으로 짧은 다리 (고정) -->
+    <g>
+      <!-- 뒷다리 (뒤로 뻗음, 길이 2칸=12px) -->
+      <rect x="48" y="66" width="6" height="6" fill="#6B4423"/> <!-- 먼 뒷다리 -->
+      <rect x="42" y="72" width="6" height="6" fill="#A0672F"/> <!-- 가까운 뒷다리 발목 -->
+      <rect x="36" y="72" width="6" height="6" fill="#D9B285"/> <!-- 뒷발 (탠) -->
+
+      <!-- 앞다리 (앞으로 뻗음, 길이 2칸=12px) -->
+      <rect x="132" y="66" width="6" height="6" fill="#6B4423"/> <!-- 먼 앞다리 -->
+      <rect x="138" y="72" width="6" height="6" fill="#A0672F"/> <!-- 가까운 앞다리 발목 -->
+      <rect x="144" y="72" width="6" height="6" fill="#D9B285"/> <!-- 앞발 (탠) -->
+    </g>
+
+    <!-- 숨쉬기 애니메이션 (몸통, 머리 전체가 납작하게 오르내림) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" keyTimes="0;0.5;1" dur="2.4s" repeatCount="indefinite"/>
+      
+      <!-- 바닥에 뉘여진 꼬리 -->
+      <rect x="30" y="66" width="18" height="6" fill="#A0672F"/>
+      
+      <!-- 바닥에 완전히 밀착된 긴 몸통 (길이 90px) -->
+      <rect x="48" y="54" width="90" height="18" fill="#A0672F"/> <!-- 등과 허리 -->
+      <rect x="48" y="72" width="90" height="6"  fill="#D9B285"/> <!-- 바닥에 깔린 배 (탠) -->
+
+      <!-- 바닥에 납작하게 내려놓은 머리 -->
+      <rect x="126" y="54" width="30" height="24" fill="#A0672F"/> <!-- 머리 베이스 -->
+      
+      <!-- 주둥이 (바닥 y=78에 밀착) -->
+      <rect x="156" y="66" width="12" height="6" fill="#A0672F"/> <!-- 윗 주둥이 -->
+      <rect x="156" y="72" width="18" height="6" fill="#D9B285"/> <!-- 아랫 주둥이 (탠) -->
+      <rect x="168" y="66" width="6"  height="6" fill="#2E1F14"/> <!-- 코 -->
+      
+      <!-- 바닥으로 넓게 퍼진 귀 -->
+      <rect x="126" y="60" width="12" height="18" fill="#6B4423"/>
+      
+      <!-- 평온하게 감은 눈 (가로선 6x2) -->
+      <rect x="144" y="60" width="6" height="2" fill="#2E1F14"/>
+    </g>
+
+    <!-- ========================================== -->
+    <!-- [수정됨] 완벽한 Zzz 애니메이션 (3개의 Z가 시차를 두고 떠오름) -->
+    <!-- ========================================== -->
+    <g transform="translate(144, 24)">
+      
+      <!-- 첫 번째 Z (작음, 18x18) -->
+      <g>
+        <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.2;0.6;1" dur="3s" begin="0s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -6,-24" dur="3s" begin="0s" repeatCount="indefinite"/>
+        <!-- 명확한 Z 형태 블록 -->
+        <rect x="6" y="0" width="12" height="6" fill="#6B4423"/>
+        <rect x="6" y="6" width="6" height="6" fill="#6B4423"/>
+        <rect x="0" y="12" width="12" height="6" fill="#6B4423"/>
+      </g>
+
+      <!-- 두 번째 Z (작음, 18x18) -->
+      <g transform="translate(18, -12)">
+        <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.2;0.6;1" dur="3s" begin="1s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -6,-24" dur="3s" begin="1s" repeatCount="indefinite"/>
+        <!-- 명확한 Z 형태 블록 -->
+        <rect x="6" y="0" width="12" height="6" fill="#6B4423"/>
+        <rect x="6" y="6" width="6" height="6" fill="#6B4423"/>
+        <rect x="0" y="12" width="12" height="6" fill="#6B4423"/>
+      </g>
+
+      <!-- 세 번째 Z (큼, 24x24) -->
+      <g transform="translate(36, -24)">
+        <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.2;0.6;1" dur="3s" begin="2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -6,-24" dur="3s" begin="2s" repeatCount="indefinite"/>
+        <!-- 더 큰 Z 형태 블록 -->
+        <rect x="6" y="0" width="18" height="6" fill="#6B4423"/>
+        <rect x="12" y="6" width="6" height="6" fill="#6B4423"/>
+        <rect x="6" y="12" width="6" height="6" fill="#6B4423"/>
+        <rect x="0" y="18" width="18" height="6" fill="#6B4423"/>
+      </g>
+      
+    </g>
+
+  </g>
+</svg>
