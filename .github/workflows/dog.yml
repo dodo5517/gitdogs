@@ -1,0 +1,60 @@
+name: update-dog
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"   # 3시간마다 (UTC)
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mock:
+        description: "mock 통계 예: today=12,week=30 (비우면 실제 데이터)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  dog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # push일 때만: 먼저 1분간 환영 장면을 발행
+      - name: Greet first (push only)
+        if: github.event_name == 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          TZ_OFFSET_HOURS: 9
+        run: |
+          node generate.js --event push
+          bash publish.sh "chore: dog greets"
+          sleep 60
+
+      # 항상: 실제 커밋 통계로 상태를 계산해 발행
+      - name: Generate dog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          TZ_OFFSET_HOURS: 9
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.mock }}" ]; then
+            ARGS="--mock ${{ github.event.inputs.mock }}"
+          fi
+          node generate.js $ARGS
+
+      - name: Publish to output branch
+        run: |
+          bash publish.sh "chore: dog state"
