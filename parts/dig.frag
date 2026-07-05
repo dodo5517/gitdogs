@@ -1,0 +1,112 @@
+<g transform="translate(-360,-4)">
+
+  <!-- 3. 제자리에서 땅 파기 (기존 베이스 100% 유지 + 90도 꺾인 머리 + 위로 튀는 흙) -->
+  <!-- 중앙 고정 배치 (translate 360, 46) -->
+  <g transform="translate(360, 46)">
+    
+    <!-- 고정된 바닥 그림자 -->
+    <ellipse cx="84" cy="70" rx="82" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- ========================================== -->
+    <!-- 뒤로 튀어 오르는 흙먼지 파티클 (위로 솟구쳤다가 뒤로 떨어지는 포물선 궤적) -->
+    <!-- 머리(우측) 방향으로는 절대 넘어가지 않음 -->
+    <!-- ========================================== -->
+    <!-- 파티클 1 (진갈색) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="114 60; 72 30; 12 66" keyTimes="0;0.5;1" dur="0.25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.6;1" dur="0.25s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="6" height="6" fill="#6B4423"/>
+    </g>
+    <!-- 파티클 2 (탠) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="108 54; 60 24; 0 66" keyTimes="0;0.5;1" dur="0.3s" begin="0.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.6;1" dur="0.3s" begin="0.1s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="6" height="6" fill="#D9B285"/>
+    </g>
+    <!-- 파티클 3 (탠) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="120 60; 84 36; 36 66" keyTimes="0;0.5;1" dur="0.2s" begin="0.05s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.6;1" dur="0.2s" begin="0.05s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="6" height="6" fill="#D9B285"/>
+    </g>
+    <!-- 파티클 4 (진갈색) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="114 66; 90 42; 48 66" keyTimes="0;0.5;1" dur="0.2s" begin="0.15s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.6;1" dur="0.2s" begin="0.15s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="6" height="6" fill="#6B4423"/>
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 땅 파는 반동 (매우 빠르고 짧은 들썩임: 0.15s 주기) -->
+    <!-- ========================================== -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 2; 0 0" keyTimes="0;0.5;1" dur="0.15s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 미친듯이 빠르게 흔들리는 꼬리 -->
+      <g>
+        <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.15s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="0" y="12" width="6" height="6" fill="#A0672F"/>
+        <rect x="6" y="18" width="6" height="6" fill="#A0672F"/>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.15s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="0" y="6" width="6" height="6" fill="#A0672F"/>
+        <rect x="6" y="12" width="6" height="6" fill="#A0672F"/>
+      </g>
+      <rect x="12" y="24" width="6" height="6" fill="#A0672F"/> <!-- 꼬리 베이스 -->
+
+      <!-- 긴 몸통 (기존 걷기 베이스 완전 동일: 120x24) -->
+      <rect x="12" y="30" width="120" height="24" fill="#A0672F"/>
+      <rect x="24" y="48" width="96" height="6" fill="#D9B285"/>
+
+      <!-- ========================================== -->
+      <!-- [수정됨] 직각(90도)으로 바닥을 향해 꺾은 머리 -->
+      <!-- 기존 얼굴 블록의 가로/세로 길이를 그대로 뒤집어 형태 유지 -->
+      <!-- ========================================== -->
+      <!-- 머리 베이스 (기존 30x24 -> 회전하여 24x30) -->
+      <rect x="114" y="24" width="24" height="30" fill="#A0672F"/>
+      
+      <!-- 중력에 의해 앞으로 툭 떨어진 귀 (기존 12x18) -->
+      <rect x="114" y="36" width="12" height="18" fill="#6B4423"/>
+      
+      <!-- 바닥을 파고 있는 주둥이 (가로형 주둥이를 세로로 세움) -->
+      <rect x="132" y="54" width="6" height="12" fill="#A0672F"/>  <!-- 윗 주둥이(우측) -->
+      <rect x="126" y="54" width="6" height="18" fill="#D9B285"/>  <!-- 아랫 주둥이(좌측, 탠) -->
+      
+      <!-- 제일 바닥에 닿은 코 -->
+      <rect x="132" y="66" width="6" height="6" fill="#2E1F14"/>
+      
+      <!-- 구덩이를 집중해서 쳐다보는 눈 -->
+      <rect x="132" y="42" width="6" height="6" fill="#2E1F14"/>
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 고정되어 버티는 뒷다리 -->
+    <!-- ========================================== -->
+    <rect x="18" y="54" width="12" height="6" fill="#A0672F"/>
+    <rect x="18" y="60" width="12" height="6" fill="#D9B285"/>
+    <rect x="36" y="54" width="12" height="6" fill="#6B4423"/>
+
+    <!-- ========================================== -->
+    <!-- 모터처럼 빠르게 흙을 파내는 앞다리 교차 (0.15초 주기) -->
+    <!-- ========================================== -->
+    <g>
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.15s" calcMode="discrete" repeatCount="indefinite"/>
+      <!-- 앞으로 내뻗어 흙을 긁는 가까운 앞다리 -->
+      <rect x="120" y="54" width="12" height="6" fill="#A0672F"/>
+      <rect x="120" y="60" width="12" height="6" fill="#D9B285"/>
+      <!-- 뒤로 흙을 차내는 먼 쪽 앞다리 (그림자) -->
+      <rect x="96" y="54" width="18" height="6" fill="#6B4423"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.15s" calcMode="discrete" repeatCount="indefinite"/>
+      <!-- 뒤로 흙을 차내는 가까운 앞다리 -->
+      <rect x="102" y="54" width="18" height="6" fill="#A0672F"/>
+      <!-- 앞으로 내뻗어 흙을 긁는 먼 쪽 앞다리 (그림자) -->
+      <rect x="114" y="54" width="12" height="6" fill="#6B4423"/>
+      <rect x="114" y="60" width="12" height="6" fill="#6B4423"/> 
+    </g>
+
+  </g>
+
+</g>

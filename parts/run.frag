@@ -1,0 +1,87 @@
+<g transform="translate(0,38)">
+
+  <!-- 1. 달리기 (갤럽 모션) / 투명 배경 / SMIL 애니메이션 -->
+  <!-- 색상: 브라운 #A0672F, 진갈색 #6B4423, 탠 #D9B285, 눈/코 #2E1F14 -->
+  <g>
+    <!-- 약 10초 주기로 배너를 빠르게 횡단 (걷기의 2.5~3배 속도) -->
+    
+
+    <!-- 바닥 그림자 (프레임에 맞춰 크기와 위치가 약간 변함) -->
+    <ellipse cx="100" cy="74" rx="100" ry="4" fill="#000000" opacity="0.12">
+      <animate attributeName="rx" values="100; 70; 100" keyTimes="0;0.5;1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="100; 110; 100" keyTimes="0;0.5;1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- ========================================== -->
+    <!-- [프레임 1] 신장 프레임: 몸통이 10% 이상 길어지고 다리를 뻗음 -->
+    <!-- ========================================== -->
+    <g>
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
+      <!-- 꼬리 (수평으로 곧게 뻗음) -->
+      <rect x="0" y="30" width="24" height="6" fill="#A0672F"/>
+      
+      <!-- 뒷다리 (뒤로 최대한 뻗음) -->
+      <rect x="0" y="48" width="18" height="6" fill="#6B4423"/> <!-- 먼 다리 -->
+      <rect x="6" y="54" width="18" height="6" fill="#A0672F"/> <!-- 가까운 다리 -->
+      <rect x="18" y="54" width="6" height="6" fill="#D9B285"/> <!-- 가까운 발 -->
+      
+      <!-- 길어진 몸통 (길이 138px) -->
+      <rect x="24" y="30" width="138" height="18" fill="#A0672F"/>
+      <rect x="30" y="48" width="120" height="6" fill="#D9B285"/> <!-- 배 -->
+      
+      <!-- 머리 -->
+      <rect x="156" y="18" width="30" height="18" fill="#A0672F"/>
+      
+      <!-- [수정된 귀] 참고 코드의 프레임 A 형태 (바람에 날려 뒤로 젖혀짐) -->
+      <rect x="150" y="12" width="12" height="12" fill="#6B4423"/>
+      
+      <!-- 주둥이 및 눈/코 -->
+      <rect x="186" y="18" width="12" height="6" fill="#A0672F"/>
+      <rect x="186" y="24" width="18" height="6" fill="#D9B285"/>
+      <rect x="198" y="18" width="6" height="6" fill="#2E1F14"/> <!-- 코 -->
+      <rect x="174" y="18" width="6" height="6" fill="#2E1F14"/> <!-- 눈 -->
+      
+      <!-- 앞다리 (앞으로 최대한 뻗음) -->
+      <rect x="162" y="48" width="18" height="6" fill="#6B4423"/> <!-- 먼 다리 -->
+      <rect x="168" y="54" width="18" height="6" fill="#A0672F"/> <!-- 가까운 다리 -->
+      <rect x="180" y="54" width="6" height="6" fill="#D9B285"/> <!-- 가까운 발 -->
+    </g>
+
+    <!-- ========================================== -->
+    <!-- [프레임 2] 수축 프레임: 등이 굽고 다리가 가슴/배 아래로 모이며 공중에 뜸 -->
+    <!-- ========================================== -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
+      <!-- 꼬리 -->
+      <rect x="42" y="36" width="18" height="6" fill="#A0672F"/>
+      
+      <!-- 뒷다리 (앞으로 끌어당겨짐) -->
+      <rect x="78" y="48" width="12" height="6" fill="#6B4423"/> <!-- 먼 다리 -->
+      <rect x="72" y="54" width="12" height="6" fill="#A0672F"/> <!-- 가까운 다리 -->
+      <rect x="78" y="54" width="6" height="6" fill="#D9B285"/> <!-- 가까운 발 -->
+      
+      <!-- 짧아지고 아치형으로 굽은 몸통 (혹처럼 위로 올라온 등) -->
+      <rect x="60" y="12" width="72" height="6" fill="#A0672F"/> <!-- 굽은 등 혹 -->
+      <rect x="54" y="18" width="84" height="24" fill="#A0672F"/>
+      <rect x="60" y="42" width="72" height="6" fill="#D9B285"/> <!-- 배 -->
+      
+      <!-- 몸 안쪽으로 당겨진 머리 -->
+      <rect x="132" y="18" width="30" height="18" fill="#A0672F"/>
+      
+      <!-- [수정된 귀] 참고 코드의 프레임 B 형태 (아래로 툭 떨어진 귀) -->
+      <rect x="132" y="24" width="12" height="18" fill="#6B4423"/>
+      
+      <!-- 주둥이 및 눈/코 -->
+      <rect x="162" y="18" width="12" height="6" fill="#A0672F"/>
+      <rect x="162" y="24" width="18" height="6" fill="#D9B285"/>
+      <rect x="174" y="18" width="6" height="6" fill="#2E1F14"/> <!-- 코 -->
+      <rect x="150" y="18" width="6" height="6" fill="#2E1F14"/> <!-- 눈 -->
+      
+      <!-- 앞다리 (뒤로 끌어당겨짐) -->
+      <rect x="114" y="48" width="12" height="6" fill="#6B4423"/> <!-- 먼 다리 -->
+      <rect x="108" y="54" width="12" height="6" fill="#A0672F"/> <!-- 가까운 다리 -->
+      <rect x="102" y="54" width="6" height="6" fill="#D9B285"/> <!-- 가까운 발 -->
+    </g>
+  </g>
+
+</g>

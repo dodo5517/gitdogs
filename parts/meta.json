@@ -1,0 +1,58 @@
+{
+  "bark": {
+    "width": 168,
+    "height": 62
+  },
+  "beg": {
+    "width": 100,
+    "height": 98
+  },
+  "bounce": {
+    "width": 168,
+    "height": 62
+  },
+  "dig": {
+    "width": 166,
+    "height": 74
+  },
+  "doze": {
+    "width": 186,
+    "height": 50
+  },
+  "lick": {
+    "width": 105,
+    "height": 66
+  },
+  "playbow": {
+    "width": 168,
+    "height": 62
+  },
+  "rest": {
+    "width": 200,
+    "height": 48
+  },
+  "run": {
+    "width": 204,
+    "height": 66
+  },
+  "shake": {
+    "width": 168,
+    "height": 62
+  },
+  "sleep": {
+    "width": 204,
+    "height": 84
+  },
+  "sniff": {
+    "width": 180,
+    "height": 62
+  },
+  "stretch": {
+    "width": 168,
+    "height": 62
+  },
+  "walk": {
+    "width": 168,
+    "height": 62
+  }
+}
