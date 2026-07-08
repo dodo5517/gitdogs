@@ -2,15 +2,15 @@ name: update-dog
 
 on:
   schedule:
-    - cron: "0 */3 * * *"   # 3시간마다 (UTC)
+    - cron: '0 */3 * * *' # 3시간마다 (UTC)
   push:
     branches: [main]
   workflow_dispatch:
     inputs:
       mock:
-        description: "mock 통계 예: today=12,week=30 (비우면 실제 데이터)"
+        description: 'mock 통계 예: today=12,week=30 (비우면 실제 데이터)'
         required: false
-        default: ""
+        default: ''
 
 permissions:
   contents: write
@@ -37,6 +37,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
           TZ_OFFSET_HOURS: 9
+          BREED: ${{ vars.BREED || 'dachshund' }} # 견종 선택: dachshund | retriever
         run: |
           node generate.js --event push
           bash publish.sh "chore: dog greets"
@@ -48,6 +49,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
           TZ_OFFSET_HOURS: 9
+          BREED: ${{ vars.BREED || 'dachshund' }} # 견종 선택: dachshund | retriever
         run: |
           ARGS=""
           if [ -n "${{ github.event.inputs.mock }}" ]; then
