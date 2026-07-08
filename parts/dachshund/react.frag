@@ -1,4 +1,4 @@
-<g transform="translate(-392,2)">
+<g transform="translate(-392,4)">
 
   <!-- 2. 두 발로 서서 조르기 / 중앙 고정 / 앞발 흔들기 -->
   <g transform="translate(400, 10)">
