@@ -1,0 +1,170 @@
+<g transform="translate(-42,50)">
+
+  <!-- 다운독 기지개(stretch): 앞다리 쭉 뻗고 가슴 낮추고 엉덩이 치켜듦 + 하품 / 투명 배경 / SMIL 전용 -->
+  <!-- 6px 격자, 오른쪽 응시 고정, 발바닥 y=66 정렬 -->
+  <!-- 팔레트: #D48C3D 골드 / #AA6323 다크골드 / #E8BB7D 애프리콧 / #24150D 눈코 / #E08796 혀 -->
+  <!-- 4s 주기: 중립(0~1s) → 낮추기(1~1.6s) → 다운독+하품(1.6~3s) → 복귀(3~4s) -->
+
+  <g transform="translate(40 0)">
+    <!-- 지면 그림자 (고정) -->
+    <ellipse cx="84" cy="70" rx="82" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- ================= 프레임 A: 중립 서있는 자세 ================= -->
+    <g>
+      <animate attributeName="opacity" values="1;1;0;0;0;0;1;1"
+        keyTimes="0; 0.25; 0.26; 0.4; 0.75; 0.78; 0.92; 1"
+        dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 다리 -->
+      <rect x="96" y="42" width="12" height="24" fill="#D48C3D"/>
+      <rect x="60" y="42" width="12" height="24" fill="#AA6323"/>
+      <rect x="48" y="42" width="12" height="24" fill="#D48C3D"/>
+      <rect x="108" y="42" width="12" height="24" fill="#AA6323"/>
+
+      <!-- 몸통 -->
+      <g fill="#D48C3D">
+        <rect x="108" y="6" width="18" height="6"/>
+        <rect x="108" y="12" width="24" height="6"/>
+        <rect x="132" y="12" width="12" height="6"/>
+        <rect x="108" y="18" width="24" height="6"/>
+        <rect x="108" y="24" width="18" height="6"/>
+        <rect x="42" y="18" width="66" height="6"/>
+        <rect x="36" y="24" width="72" height="12"/>
+        <rect x="36" y="36" width="6" height="6"/>
+      </g>
+      <g fill="#E8BB7D">
+        <rect x="132" y="18" width="12" height="6"/>
+        <rect x="108" y="30" width="18" height="6"/>
+        <rect x="108" y="36" width="12" height="6"/>
+        <rect x="42" y="36" width="66" height="6"/>
+        <rect x="48" y="42" width="6" height="6"/>
+        <rect x="60" y="42" width="6" height="6"/>
+        <rect x="72" y="42" width="6" height="6"/>
+        <rect x="84" y="42" width="6" height="6"/>
+        <rect x="96" y="42" width="6" height="6"/>
+      </g>
+      <g fill="#24150D">
+        <rect x="120" y="12" width="6" height="6"/>
+        <rect x="144" y="12" width="6" height="6"/>
+      </g>
+      <rect x="144" y="18" width="6" height="6" fill="#E08796"/>
+      <rect x="108" y="12" width="12" height="18" fill="#AA6323"/>
+      <!-- 꼬리 -->
+      <rect x="30" y="24" width="6" height="6" fill="#D48C3D"/>
+      <rect x="18" y="24" width="12" height="6" fill="#D48C3D"/>
+      <rect x="18" y="30" width="12" height="6" fill="#E8BB7D"/>
+    </g>
+
+    <!-- ================= 프레임 B: 가슴 낮추는 전환 (앞 낮고 뒤 아직 보통) ================= -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0"
+        keyTimes="0; 0.25; 0.26; 0.40; 0.41; 0.76; 0.77; 0.91; 0.92"
+        dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 뒷다리: 보통 높이로 지면에 섬 -->
+      <rect x="48" y="42" width="12" height="24" fill="#D48C3D"/> <!-- 뒷다리 왼 -->
+      <rect x="60" y="42" width="12" height="24" fill="#AA6323"/> <!-- 뒷다리 오른 -->
+      <!-- 앞다리: 앞으로 내밀며 낮아진 어깨에서 지면까지 -->
+      <rect x="114" y="48" width="12" height="18" fill="#D48C3D"/> <!-- 앞다리 왼 -->
+      <rect x="126" y="48" width="12" height="18" fill="#AA6323"/> <!-- 앞다리 오른 -->
+
+      <!-- 등: 엉덩이 높고 어깨 낮은 완만한 대각선 -->
+      <g fill="#D48C3D">
+        <rect x="36" y="18" width="24" height="6"/>  <!-- 엉덩이 쪽(높음) -->
+        <rect x="42" y="24" width="66" height="6"/>  <!-- 등 상단 -->
+        <rect x="48" y="30" width="66" height="12"/> <!-- 몸통 중앙, 앞으로 낮게 -->
+        <rect x="102" y="36" width="18" height="6"/> <!-- 어깨(낮아짐) -->
+      </g>
+
+      <!-- 머리: 앞으로 숙여 내려감 -->
+      <g fill="#D48C3D">
+        <rect x="114" y="24" width="24" height="6"/> <!-- 정수리 -->
+        <rect x="114" y="30" width="24" height="6"/> <!-- 윗머리 -->
+        <rect x="138" y="30" width="12" height="6"/> <!-- 주둥이 윗부분 -->
+        <rect x="114" y="36" width="18" height="6"/> <!-- 뺨 -->
+      </g>
+
+      <!-- 애프리콧 장식털 -->
+      <g fill="#E8BB7D">
+        <rect x="48" y="42" width="66" height="6"/> <!-- 배 아래 -->
+        <rect x="138" y="36" width="12" height="6"/> <!-- 턱 아래 -->
+        <rect x="114" y="42" width="12" height="6"/> <!-- 가슴섶 -->
+      </g>
+
+      <!-- 눈 & 코 -->
+      <g fill="#24150D">
+        <rect x="126" y="30" width="6" height="6"/> <!-- 눈 -->
+        <rect x="150" y="30" width="6" height="6"/> <!-- 코 -->
+      </g>
+      <rect x="150" y="36" width="6" height="6" fill="#E08796"/> <!-- 혀 -->
+
+      <!-- 앞으로 처진 귀 -->
+      <rect x="114" y="30" width="12" height="18" fill="#AA6323"/>
+
+      <!-- 꼬리: 위로 살짝 올라감 -->
+      <rect x="30" y="18" width="6" height="6" fill="#D48C3D"/>
+      <rect x="18" y="12" width="18" height="6" fill="#D48C3D"/>
+      <rect x="18" y="18" width="12" height="6" fill="#E8BB7D"/>
+    </g>
+
+    <!-- ================= 프레임 C: 완전 다운독 + 하품 ================= -->
+    <!-- 앞다리 앞으로 쭉, 가슴 바닥, 엉덩이 하늘로 치켜듦, 입 크게 벌린 하품 -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0"
+        keyTimes="0; 0.40; 0.41; 0.76; 0.77; 1"
+        dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 뒷다리: 엉덩이 치켜들어 곧게 섬 (지면까지 길게) -->
+      <rect x="42" y="18" width="12" height="48" fill="#D48C3D"/> <!-- 뒷다리 왼 -->
+      <rect x="54" y="24" width="12" height="42" fill="#AA6323"/> <!-- 뒷다리 오른 -->
+
+      <!-- 치켜든 엉덩이 & 아래로 기운 등 (앞이 낮고 뒤가 높은 대각선) -->
+      <g fill="#D48C3D">
+        <rect x="36" y="6"  width="24" height="6"/>  <!-- 치켜든 엉덩이 정점 -->
+        <rect x="36" y="12" width="30" height="6"/>
+        <rect x="42" y="18" width="30" height="6"/>
+        <rect x="54" y="24" width="30" height="6"/>  <!-- 등 대각선 하강 -->
+        <rect x="66" y="30" width="30" height="6"/>
+        <rect x="78" y="36" width="30" height="6"/>
+        <rect x="90" y="42" width="30" height="6"/>  <!-- 가슴 바닥 근처 -->
+      </g>
+
+      <!-- 낮춘 가슴 & 머리 (바닥 가까이) -->
+      <g fill="#D48C3D">
+        <rect x="108" y="42" width="30" height="6"/>
+        <rect x="108" y="48" width="30" height="12"/> <!-- 가슴/머리 바닥 밀착 -->
+      </g>
+
+      <!-- 앞다리: 앞으로 쭉 뻗어 지면에 깔림 -->
+      <rect x="138" y="60" width="36" height="6" fill="#D48C3D"/>
+      <rect x="138" y="60" width="36" height="6" fill="#AA6323" opacity="0.35"/>
+      <rect x="168" y="60" width="6" height="6" fill="#AA6323"/> <!-- 앞발 끝 -->
+
+      <!-- 애프리콧 장식털 (가슴 아래) -->
+      <g fill="#E8BB7D">
+        <rect x="108" y="60" width="30" height="6"/>
+        <rect x="90" y="48" width="18" height="6"/>
+      </g>
+
+      <!-- 하품: 크게 벌린 입 -->
+      <rect x="138" y="48" width="18" height="6" fill="#D48C3D"/> <!-- 주둥이 윗턱 -->
+      <rect x="150" y="48" width="12" height="6" fill="#24150D"/> <!-- 벌어진 입 안쪽(어두움) -->
+      <rect x="156" y="54" width="6" height="6" fill="#24150D"/>
+      <rect x="150" y="54" width="6" height="6" fill="#E08796"/> <!-- 혀 -->
+      <rect x="162" y="48" width="6" height="6" fill="#24150D"/> <!-- 코 -->
+      <rect x="138" y="54" width="12" height="6" fill="#E8BB7D"/> <!-- 아래턱 -->
+
+      <!-- 질끈 감은 눈 (하품 중) -->
+      <rect x="126" y="50" width="6" height="2" fill="#24150D"/>
+
+      <!-- 앞으로 늘어진 귀 -->
+      <rect x="114" y="48" width="12" height="18" fill="#AA6323"/>
+
+      <!-- 치켜든 꼬리 (하늘로) -->
+      <rect x="30" y="0"  width="6" height="6" fill="#D48C3D"/>
+      <rect x="30" y="6"  width="6" height="6" fill="#D48C3D"/>
+      <rect x="24" y="0"  width="6" height="6" fill="#E8BB7D"/>
+    </g>
+  </g>
+
+</g>

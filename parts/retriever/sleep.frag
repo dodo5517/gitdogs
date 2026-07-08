@@ -1,0 +1,115 @@
+<g transform="translate(-334,44)">
+
+  <!-- 배 까고 꿀잠 자는 다크 카라멜 골든 리트리버 (Belly-up Relaxed Sleep) / 투명 배경 / SMIL 전용 -->
+  <!-- 6px 격자 기반: 모든 rect 좌표와 크기는 6의 배수, 픽셀 틈새 0% -->
+  <!-- 중력에 의해 관절에 힘이 빠져 배 위로 툭 떨어진(Dangling) 네 발 디테일 반영 -->
+  <!-- 팔레트: 카라멜 골드 #D48C3D, 다크 골드 #AA6323, 애프리콧 장식털 #E8BB7D, 눈코 #24150D, 혀 #E08796 -->
+
+  <g transform="translate(340, 0)">
+    <!-- 지면 그림자 (발라당 누워 길어진 체형에 맞춰 넓고 안정감 있게) -->
+    <ellipse cx="84" cy="70" rx="90" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- 1. 바닥에 완전히 밀착된 고정 바디, 머리, 꼬리 (숨 쉴 때 틈새 방지) -->
+    <g>
+      <!-- 바닥에 깔린 깃털 꼬리 -->
+      <rect x="18" y="54" width="24" height="6" fill="#D48C3D"/> <!-- 꼬리 베이스 -->
+      <rect x="12" y="60" width="30" height="6" fill="#D48C3D"/> <!-- 꼬리 메인 -->
+      <rect x="18" y="66" width="18" height="6" fill="#E8BB7D"/> <!-- 꼬리 끝 크림 깃털 -->
+      <rect x="12" y="66" width="6" height="6" fill="#AA6323"/>  <!-- 깃털 음영 -->
+
+      <!-- 바닥에 닿은 넓은 등과 목 (베이스 골드) -->
+      <rect x="42" y="60" width="78" height="6" fill="#D48C3D"/> <!-- 지면 밀착 부분 -->
+      <rect x="42" y="54" width="84" height="6" fill="#D48C3D"/> <!-- 등 중앙 -->
+      <rect x="42" y="48" width="84" height="6" fill="#D48C3D"/> <!-- 숨 쉴 때 빈틈을 메워주는 베이스 언더레이 -->
+
+      <!-- 거꾸로 뒤집혀 바닥에 납작해진 멍청하고 귀여운 얼굴 -->
+      <!-- 정수리와 뒤통수 (바닥에 닿음) -->
+      <rect x="120" y="60" width="24" height="6" fill="#D48C3D"/>
+      <rect x="126" y="54" width="18" height="6" fill="#D48C3D"/>
+      
+      <!-- 위를 향해 벌어진 입과 코 -->
+      <rect x="144" y="54" width="12" height="6" fill="#D48C3D"/> <!-- 윗주둥이(뒤집혀서 아래 위치) -->
+      <rect x="156" y="54" width="6" height="6" fill="#24150D"/>  <!-- 콧등 -->
+      <rect x="138" y="48" width="12" height="6" fill="#E8BB7D"/> <!-- 아랫턱(뒤집혀서 위 위치) -->
+      <rect x="150" y="48" width="6" height="6" fill="#E08796"/>  <!-- 입 밖으로 흘러내린 핑크 혀(Blep) -->
+      
+      <!-- 중력을 받아 바닥으로 넓게 퍼진 귀와 꽉 감은 눈 -->
+      <rect x="96" y="60" width="24" height="6" fill="#AA6323"/>  <!-- 바닥에 찰싹 달라붙은 귀 -->
+      <rect x="132" y="54" width="6" height="6" fill="#AA6323"/>  <!-- 편안하게 감은 눈 -->
+
+      <!-- 숨 쉴 때 빈틈이 안 보이게 막아주는 고정 배(Underlay) -->
+      <rect x="54" y="48" width="66" height="6" fill="#E8BB7D"/>
+    </g>
+
+    <!-- 2. 숨쉬는 볼록한 배와 중력에 이완된 네 발 (3초 주기로 y축 -2px 들썩임) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" 
+        values="0 0; 0 -2; 0 0" keyTimes="0; 0.5; 1" dur="3s" 
+        calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 뽀얀 애프리콧 크림색 배 (숨 쉴 때 위아래로 팽창) -->
+      <rect x="54" y="42" width="54" height="6" fill="#E8BB7D"/> <!-- 배 중앙 볼록한 부분 -->
+      <rect x="48" y="48" width="66" height="6" fill="#E8BB7D"/> <!-- 배 하단 넓은 부분 -->
+
+      <!-- [수정됨] 공중에 뜨고 중력으로 툭 떨어진 배경쪽 다리 (다크 골드) -->
+      <g fill="#AA6323">
+        <!-- 배경 뒷다리 (오른발) -->
+        <rect x="60" y="36" width="12" height="6"/> <!-- 허공을 향한 허벅지 -->
+        <rect x="66" y="42" width="6" height="6"/>  <!-- 관절이 풀려 배 쪽으로 툭 떨어진 발끝 -->
+        <!-- 배경 앞다리 (오른손) -->
+        <rect x="96" y="36" width="12" height="6"/> <!-- 허공을 향한 팔 -->
+        <rect x="102" y="42" width="6" height="6"/> <!-- 관절이 풀려 가슴 쪽으로 툭 떨어진 발끝 -->
+      </g>
+
+      <!-- [수정됨] 공중에 뜨고 중력으로 툭 떨어진 전경쪽 다리 (베이스 골드) -->
+      <g fill="#D48C3D">
+        <!-- 전경 뒷다리 (왼발) -->
+        <rect x="48" y="36" width="12" height="6"/> <!-- 허공을 향한 허벅지 -->
+        <rect x="48" y="42" width="6" height="6"/>  <!-- 중력에 의해 아래로 툭 떨어진 발끝 -->
+        <!-- 전경 앞다리 (왼손) -->
+        <rect x="84" y="36" width="12" height="6"/> <!-- 허공을 향한 팔 -->
+        <rect x="84" y="42" width="6" height="6"/>  <!-- 중력에 의해 가슴 위로 툭 떨어진 발끝 -->
+      </g>
+    </g>
+
+    <!-- 3. 코 위로 몽글몽글 피어오르는 Zzz 도트 이펙트 -->
+    <!-- ========================================== -->
+    <!-- [수정됨] 완벽한 Zzz 애니메이션 (3개의 Z가 시차를 두고 떠오름) -->
+    <!-- ========================================== -->
+    <g transform="translate(144, 24)">
+      
+      <!-- 첫 번째 Z (작음, 18x18) -->
+      <g>
+        <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.2;0.6;1" dur="3s" begin="0s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -6,-24" dur="3s" begin="0s" repeatCount="indefinite"/>
+        <!-- 명확한 Z 형태 블록 -->
+        <rect x="6" y="0" width="12" height="6" fill="#6B4423"/>
+        <rect x="6" y="6" width="6" height="6" fill="#6B4423"/>
+        <rect x="0" y="12" width="12" height="6" fill="#6B4423"/>
+      </g>
+
+      <!-- 두 번째 Z (작음, 18x18) -->
+      <g transform="translate(18, -12)">
+        <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.2;0.6;1" dur="3s" begin="1s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -6,-24" dur="3s" begin="1s" repeatCount="indefinite"/>
+        <!-- 명확한 Z 형태 블록 -->
+        <rect x="6" y="0" width="12" height="6" fill="#6B4423"/>
+        <rect x="6" y="6" width="6" height="6" fill="#6B4423"/>
+        <rect x="0" y="12" width="12" height="6" fill="#6B4423"/>
+      </g>
+
+      <!-- 세 번째 Z (큼, 24x24) -->
+      <g transform="translate(36, -24)">
+        <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.2;0.6;1" dur="3s" begin="2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -6,-24" dur="3s" begin="2s" repeatCount="indefinite"/>
+        <!-- 더 큰 Z 형태 블록 -->
+        <rect x="6" y="0" width="18" height="6" fill="#6B4423"/>
+        <rect x="12" y="6" width="6" height="6" fill="#6B4423"/>
+        <rect x="6" y="12" width="6" height="6" fill="#6B4423"/>
+        <rect x="0" y="18" width="18" height="6" fill="#6B4423"/>
+      </g>
+      
+    </g>
+  </g>
+
+</g>

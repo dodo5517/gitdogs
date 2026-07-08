@@ -1,0 +1,99 @@
+<g transform="translate(-344,50)">
+
+  <!-- 플레이 바우(playbow): 앞다리 바닥, 엉덩이 높이, 혀 내밀고 정면 응시 / 투명 배경 / SMIL 전용 -->
+  <!-- 6px 격자, 오른쪽 응시 고정, 발바닥 y=66 정렬 -->
+  <!-- 팔레트: #D48C3D 골드 / #AA6323 다크골드 / #E8BB7D 애프리콧 / #24150D 눈코 / #E08796 혀 -->
+  <!-- 엉덩이 좌우 씰룩임 0.25s가 핵심 / 몸통은 두툼하게 -->
+
+  <g transform="translate(342 0)">
+    <!-- 지면 그림자 (고정) -->
+    <ellipse cx="84" cy="70" rx="82" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- ================= 뒷부분: 엉덩이+뒷다리+꼬리 (좌우 씰룩임) ================= -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="-3 0; 3 0; -3 0" keyTimes="0; 0.5; 1"
+        dur="0.5s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 뒷다리: 엉덩이에서 지면까지 두툼하게 -->
+      <rect x="30" y="36" width="18" height="30" fill="#AA6323"/> <!-- 뒷다리 오른(뒤) -->
+      <rect x="48" y="36" width="18" height="30" fill="#D48C3D"/> <!-- 뒷다리 왼(앞) -->
+      <rect x="30" y="60" width="18" height="6"  fill="#24150D" opacity="0.25"/> <!-- 뒷발 그늘 -->
+
+      <!-- 치켜든 엉덩이 (크고 둥근 볼륨) -->
+      <g fill="#D48C3D">
+        <rect x="30" y="6"  width="30" height="6"/>  <!-- 엉덩이 정점 -->
+        <rect x="24" y="12" width="48" height="6"/>
+        <rect x="24" y="18" width="54" height="6"/>
+        <rect x="24" y="24" width="60" height="6"/>  <!-- 엉덩이 최대 폭 -->
+        <rect x="30" y="30" width="54" height="6"/>
+        <rect x="36" y="36" width="48" height="6"/>  <!-- 허리로 이어지는 아랫배 -->
+      </g>
+      <!-- 엉덩이 뒤쪽 밝은 털 -->
+      <rect x="24" y="30" width="12" height="6" fill="#E8BB7D"/>
+      <rect x="30" y="36" width="6"  height="6" fill="#E8BB7D"/>
+
+      <!-- 치켜든 꼬리 (하늘로) -->
+      <rect x="18" y="0"  width="6"  height="6" fill="#E8BB7D"/>
+      <rect x="24" y="0"  width="12" height="6" fill="#D48C3D"/>
+      <rect x="30" y="6"  width="6"  height="6" fill="#D48C3D"/>
+    </g>
+
+    <!-- ================= 허리(고정): 두툼한 몸통으로 앞뒤 연결 ================= -->
+    <!-- 씰룩임 ±3px에도 틈이 안 벌어지도록 넉넉히 겹침 -->
+    <g fill="#D48C3D">
+      <rect x="60" y="18" width="30" height="6"/>  <!-- 허리 윗등 -->
+      <rect x="60" y="24" width="36" height="6"/>
+      <rect x="66" y="30" width="36" height="6"/>  <!-- 허리 중앙 -->
+      <rect x="72" y="36" width="36" height="6"/>  <!-- 허리 아랫배 (두툼) -->
+    </g>
+    <rect x="66" y="42" width="30" height="6" fill="#E8BB7D"/> <!-- 배 아래 밝은 털 -->
+
+    <!-- ================= 앞부분: 깊은 가슴 + 어깨 + 머리 (바닥에 고정) ================= -->
+    <!-- 등 topline: 허리 → 어깨로 완만히 하강 -->
+    <g fill="#D48C3D">
+      <rect x="90" y="24" width="18" height="6"/>  <!-- 등 어깨 상단 -->
+      <rect x="96" y="30" width="24" height="6"/>
+      <rect x="96" y="36" width="30" height="6"/>  <!-- 어깨 몸통 -->
+      <rect x="96" y="42" width="36" height="12"/> <!-- 깊은 가슴 (두툼) -->
+      <rect x="102" y="54" width="30" height="6"/> <!-- 가슴 아래 -->
+    </g>
+
+    <!-- 가슴 앞 애프리콧 장식털(ruff) -->
+    <g fill="#E8BB7D">
+      <rect x="96" y="48" width="12" height="12"/>
+      <rect x="90" y="42" width="12" height="6"/>
+    </g>
+
+    <!-- 앞다리: 바닥에 낮게 접혀 붙음 + 앞으로 뻗은 발 -->
+    <rect x="108" y="54" width="12" height="12" fill="#AA6323"/> <!-- 앞다리 오른(뒤) -->
+    <rect x="120" y="54" width="12" height="12" fill="#D48C3D"/> <!-- 앞다리 왼(앞) -->
+    <rect x="132" y="60" width="30" height="6"  fill="#E8BB7D"/> <!-- 앞으로 뻗은 발 -->
+    <rect x="156" y="60" width="6"  height="6"  fill="#AA6323"/> <!-- 발끝 음영 -->
+
+    <!-- 머리: 바닥 가까이 낮추되 정면(오른쪽) 응시, 두상 큼직하게 -->
+    <g fill="#D48C3D">
+      <rect x="126" y="36" width="30" height="6"/> <!-- 정수리 -->
+      <rect x="126" y="42" width="30" height="6"/> <!-- 윗머리 -->
+      <rect x="156" y="42" width="12" height="6"/> <!-- 주둥이 윗부분 -->
+      <rect x="126" y="48" width="24" height="6"/> <!-- 뺨 -->
+    </g>
+
+    <!-- 애프리콧 턱 -->
+    <rect x="150" y="48" width="18" height="6" fill="#E8BB7D"/>
+
+    <!-- 눈 & 코 (정면 응시) -->
+    <g fill="#24150D">
+      <rect x="144" y="42" width="6" height="6"/> <!-- 눈 -->
+      <rect x="168" y="42" width="6" height="6"/> <!-- 코 -->
+    </g>
+
+    <!-- 내민 혀 (플레이풀, 아래로 쏙) -->
+    <rect x="168" y="48" width="6" height="6" fill="#E08796"/>
+    <rect x="168" y="54" width="6" height="6" fill="#E08796"/>
+
+    <!-- 앞으로 늘어진 큰 귀 -->
+    <rect x="126" y="42" width="12" height="18" fill="#AA6323"/>
+  </g>
+
+</g>

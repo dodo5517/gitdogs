@@ -1,0 +1,137 @@
+<g transform="translate(-42,50)">
+
+  <!-- 부르르 털기(shake): 머리 → 몸통 순차 진동 / 투명 배경 / SMIL 전용 -->
+  <!-- 6px 격자, 오른쪽 응시 고정, 발바닥 y=66 정렬 -->
+  <!-- 팔레트: #D48C3D 골드 / #AA6323 다크골드 / #E8BB7D 애프리콧 / #24150D 눈코 / #E08796 혀 -->
+  <!-- 4s 주기: 머리 먼저 격하게 털고(≈1~1.8s) 그 여파가 몸통으로 이어짐(≈1.4~2.2s) -->
+
+  <g transform="translate(40 0)">
+    <!-- 지면 그림자 (고정) -->
+    <ellipse cx="84" cy="70" rx="82" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- 다리 (지면 고정) -->
+    <g>
+      <rect x="96" y="42" width="12" height="24" fill="#D48C3D"/> <!-- 앞다리 왼 -->
+      <rect x="60" y="42" width="12" height="24" fill="#AA6323"/> <!-- 뒷다리 오른 -->
+      <rect x="48" y="42" width="12" height="24" fill="#D48C3D"/> <!-- 뒷다리 왼 -->
+      <rect x="108" y="42" width="12" height="24" fill="#AA6323"/> <!-- 앞다리 오른 -->
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 2단계: 몸통 부르르 (머리 털기가 끝날 즈음 시작) -->
+    <!-- ========================================== -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 0; -6 4; 6 -4; -6 4; 6 -4; -4 2; 0 0; 0 0"
+        keyTimes="0; 0.35; 0.40; 0.45; 0.50; 0.55; 0.58; 0.62; 1"
+        dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 몸통 (골드) -->
+      <g fill="#D48C3D">
+        <rect x="42" y="18" width="66" height="6"/> <!-- 등 -->
+        <rect x="36" y="24" width="72" height="12"/> <!-- 몸통 중앙 -->
+        <rect x="36" y="36" width="6" height="6"/> <!-- 엉덩이 -->
+      </g>
+
+      <!-- 애프리콧 배 장식털 -->
+      <g fill="#E8BB7D">
+        <rect x="42" y="36" width="66" height="6"/>
+        <rect x="48" y="42" width="6" height="6"/>
+        <rect x="60" y="42" width="6" height="6"/>
+        <rect x="72" y="42" width="6" height="6"/>
+        <rect x="84" y="42" width="6" height="6"/>
+        <rect x="96" y="42" width="6" height="6"/>
+      </g>
+
+      <!-- 꼬리: 몸통 털릴 때 잔상 (2프레임 교대) -->
+      <g>
+        <animate attributeName="opacity" values="1;1;0;1;0;1"
+          keyTimes="0; 0.35; 0.42; 0.48; 0.54; 0.62"
+          dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="30" y="24" width="6" height="6" fill="#D48C3D"/>
+        <rect x="18" y="24" width="12" height="6" fill="#D48C3D"/>
+        <rect x="12" y="30" width="6" height="6" fill="#D48C3D"/>
+        <rect x="18" y="30" width="12" height="6" fill="#E8BB7D"/>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;0;1;0"
+          keyTimes="0; 0.35; 0.42; 0.48; 0.54; 0.62"
+          dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="30" y="24" width="6" height="6" fill="#D48C3D"/>
+        <rect x="24" y="18" width="12" height="6" fill="#D48C3D"/>
+        <rect x="18" y="12" width="6" height="6" fill="#D48C3D"/>
+        <rect x="24" y="24" width="12" height="6" fill="#E8BB7D"/>
+      </g>
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 1단계: 머리 부르르 (가장 먼저, 가장 격하게) -->
+    <!-- ========================================== -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 0; -6 0; 6 0; -6 0; 6 0; -6 0; 6 0; -6 0; 6 0; 0 0; 0 0"
+        keyTimes="0; 0.25; 0.28; 0.31; 0.34; 0.37; 0.40; 0.43; 0.46; 0.49; 0.52; 1"
+        dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 두상 (골드) -->
+      <g fill="#D48C3D">
+        <rect x="108" y="6" width="18" height="6"/>
+        <rect x="108" y="12" width="24" height="6"/>
+        <rect x="132" y="12" width="12" height="6"/>
+        <rect x="108" y="18" width="24" height="6"/>
+        <rect x="108" y="24" width="18" height="6"/>
+      </g>
+
+      <!-- 애프리콧 턱/가슴섶 -->
+      <g fill="#E8BB7D">
+        <rect x="132" y="18" width="12" height="6"/>
+        <rect x="108" y="30" width="18" height="6"/>
+        <rect x="108" y="36" width="12" height="6"/>
+      </g>
+
+      <!-- 코 (고정) -->
+      <rect x="144" y="12" width="6" height="6" fill="#24150D"/>
+      <!-- 혀 -->
+      <rect x="144" y="18" width="6" height="6" fill="#E08796"/>
+
+      <!-- 눈: 평소 뜬 눈 / 털 때 질끈 감음 -->
+      <g>
+        <animate attributeName="opacity" values="1;0;1"
+          keyTimes="0; 0.25; 0.52" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="120" y="12" width="6" height="6" fill="#24150D"/> <!-- 뜬 눈 -->
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;0"
+          keyTimes="0; 0.25; 0.52" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="120" y="16" width="6" height="2" fill="#24150D"/> <!-- 질끈 감은 눈 -->
+      </g>
+
+      <!-- 귀: 평소 처진 귀 / 털 때 양옆으로 펄럭이며 날림 -->
+      <g>
+        <animate attributeName="opacity" values="1;0;1"
+          keyTimes="0; 0.25; 0.52" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="108" y="12" width="12" height="18" fill="#AA6323"/> <!-- 차분한 귀 -->
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;0"
+          keyTimes="0; 0.25; 0.52" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <!-- 수평으로 날아오른 귀 조각 -->
+        <rect x="96"  y="6"  width="12" height="6" fill="#AA6323"/> <!-- 뒤로 펄럭 -->
+        <rect x="90"  y="12" width="18" height="6" fill="#AA6323"/>
+        <rect x="132" y="6"  width="12" height="6" fill="#AA6323"/> <!-- 앞으로 펄럭 -->
+      </g>
+    </g>
+
+    <!-- 털 때 튀는 물방울/먼지 이펙트 -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;0"
+        keyTimes="0; 0.30; 0.55" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+      <rect x="90"  y="-6" width="6" height="6" fill="#E8BB7D"/>
+      <rect x="132" y="-12" width="6" height="6" fill="#D48C3D"/>
+      <rect x="156" y="6"  width="6" height="6" fill="#AA6323"/>
+      <rect x="24"  y="0"  width="6" height="6" fill="#E8BB7D"/>
+      <rect x="0"   y="12" width="6" height="6" fill="#D48C3D"/>
+    </g>
+  </g>
+
+</g>
