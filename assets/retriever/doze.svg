@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 120" width="880" height="120">
+  <!-- 엎드려 조는 다크 카라멜 골든 리트리버 (Doze) / 투명 배경 / SMIL 전용 -->
+  <!-- 6px 격자, 걷기/쉬기 모델 팔레트·정체성·비율 통일 -->
+  <!-- 팔레트: #D48C3D 골드 / #AA6323 다크골드 / #E8BB7D 애프리콧 / #24150D 눈코 / #E08796 혀 -->
+  <!-- 정지 자세: 중앙 고정 / 5초 주기 고개 떨굼 + 눈 감김 (목뿌리 고정, 두상만 떨어짐) -->
+
+  <g transform="translate(320 0)">
+    <!-- 지면 그림자 -->
+    <ellipse cx="72" cy="70" rx="96" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- 1. 배경 뒷다리 (다크 골드, 접힘) -->
+    <rect x="12" y="54" width="30" height="6" fill="#AA6323"/>
+
+    <!-- 2. 몸통 언더레이 (숨쉴 때 틈 방지) -->
+    <rect x="18" y="42" width="90" height="24" fill="#D48C3D"/>
+
+    <!-- 3. 앞으로 뻗은 전경 앞발 (골드) -->
+    <g fill="#D48C3D">
+      <rect x="102" y="60" width="48" height="6"/>  <!-- 앞발 뻗음 -->
+    </g>
+    <rect x="138" y="60" width="12" height="6" fill="#E8BB7D"/> <!-- 발끝 밝은 털 -->
+
+    <!-- 4. 게으른 꼬리 쿵쿵 (5초 주기 Thump, 몸통 뒤끝에 붙임) -->
+    <g>
+      <g>
+        <animate attributeName="opacity" values="1;1;0;1;0;1" keyTimes="0;0.82;0.86;0.9;0.94;1" dur="5s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="0"   y="54" width="18" height="6" fill="#D48C3D"/> <!-- 꼬리 뿌리 -->
+        <rect x="-12" y="60" width="30" height="6" fill="#E8BB7D"/> <!-- 꼬리 아랫면 밝은 털 -->
+        <rect x="0"   y="60" width="6"  height="6" fill="#AA6323"/> <!-- 프린지 음영 -->
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;0;1;0" keyTimes="0;0.82;0.86;0.9;0.94;1" dur="5s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="0"   y="48" width="18" height="6" fill="#D48C3D"/>
+        <rect x="-12" y="54" width="30" height="6" fill="#E8BB7D"/>
+        <rect x="0"   y="54" width="6"  height="6" fill="#AA6323"/>
+      </g>
+    </g>
+
+    <!-- 5. 편안하게 호흡하는 상단 몸통 (봉긋한 등, y축 -2px 들썩임 / 쉬기 모델과 동일 스타일) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0" keyTimes="0; 0.5; 1" dur="5s" calcMode="discrete" repeatCount="indefinite"/>
+      <rect x="42" y="30" width="36" height="6" fill="#D48C3D"/> <!-- 봉긋한 엉덩이~등 정상 -->
+      <rect x="30" y="36" width="60" height="6" fill="#D48C3D"/> <!-- 등 상단 -->
+      <rect x="24" y="42" width="78" height="6" fill="#D48C3D"/> <!-- 어깨~허리 -->
+      <rect x="18" y="48" width="90" height="6" fill="#D48C3D"/> <!-- 몸통 폭 -->
+      <!-- 등 위쪽 밝은 하이라이트 / 어깨 앞 음영 (쉬기와 동일 처리) -->
+      <rect x="30" y="36" width="12" height="6" fill="#E8BB7D"/>
+      <rect x="18" y="48" width="12" height="6" fill="#AA6323"/>
+    </g>
+
+    <!-- 바닥에 닿은 크림색 배 (고정) -->
+    <rect x="24" y="60" width="84" height="6" fill="#E8BB7D"/>
+    <!-- 옆구리 아래 다크 음영 (입체감) -->
+    <rect x="18" y="54" width="18" height="6" fill="#AA6323"/>
+    <rect x="96" y="54" width="12" height="6" fill="#AA6323"/>
+
+    <!-- 6. 목뿌리 (고정): 몸통 앞쪽에서 두상을 받쳐줌. 고개가 떨어져도 안 움직임 -->
+    <g fill="#D48C3D">
+      <rect x="84" y="42" width="24" height="6"/>
+      <rect x="90" y="48" width="18" height="12"/>
+    </g>
+    <rect x="90" y="54" width="12" height="6" fill="#E8BB7D"/> <!-- 가슴섶 밝은 털 -->
+
+    <!-- 7. 머리 그룹: 걷기/쉬기 두상 구조 그대로, 5초 3단 떨굼 -->
+    <!-- 두상 구조: 정수리18 / 눈가24 / 주둥이12 / 눈 x+12 / 코 x+36 / 귀 12×18 -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 12; 0 18; 0 24; 0 30; 0 12"
+        keyTimes="0; 0.30; 0.55; 0.82; 0.86"
+        dur="5s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 두상 (걷기·쉬기 모델과 동일) -->
+      <g fill="#D48C3D">
+        <rect x="90"  y="6"  width="18" height="6"/> <!-- 정수리 -->
+        <rect x="90"  y="12" width="24" height="6"/> <!-- 눈가 및 윗머리 -->
+        <rect x="114" y="12" width="12" height="6"/> <!-- 두툼한 주둥이 윗부분 -->
+        <rect x="90"  y="18" width="24" height="6"/> <!-- 뺨 -->
+        <rect x="90"  y="24" width="18" height="6"/> <!-- 목 -->
+      </g>
+      <!-- 애프리콧 (턱, 가슴섶) -->
+      <g fill="#E8BB7D">
+        <rect x="114" y="18" width="12" height="6"/> <!-- 턱과 웃는 입 베이스 -->
+        <rect x="90"  y="30" width="18" height="6"/> <!-- 가슴섶(걷기와 동일 위치) -->
+      </g>
+      <!-- 코 -->
+      <rect x="126" y="12" width="6" height="6" fill="#24150D"/>
+      <!-- 눈: 뜬 프레임 -->
+      <g>
+        <animate attributeName="opacity" values="1;1;0;0;1"
+          keyTimes="0;0.28;0.30;0.855;0.86" dur="5s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="102" y="12" width="6" height="6" fill="#24150D"/>
+      </g>
+      <!-- 눈: 감긴 프레임 (의도된 2px 선) -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0"
+          keyTimes="0;0.28;0.30;0.855;0.86" dur="5s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="102" y="16" width="6" height="2" fill="#24150D"/>
+      </g>
+      <!-- 혀 -->
+      <rect x="126" y="18" width="6" height="6" fill="#E08796"/>
+      <!-- 늘어진 귀 (걷기·쉬기와 동일 12×18) -->
+      <rect x="90" y="12" width="12" height="18" fill="#AA6323"/>
+    </g>
+  </g>
+</svg>
