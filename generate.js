@@ -2,9 +2,9 @@
 // 사용법: GITHUB_TOKEN=... GITHUB_USERNAME=... node generate.js [--event push] [--mock "today=3,week=9"]
 // Node 18 이상 필요 (내장 fetch 사용)
 
-const fs = require("fs");
-const path = require("path");
-const crypto = require("crypto");
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
 
 // ---------------------------------------------------------------------------
 // 1. 상태 결정 (순수 함수, 단위 테스트 대상)
@@ -22,13 +22,13 @@ const STREAK_MILESTONES = [5, 10, 30, 50, 70, 100, 365];
 function decideState(stats, seed, event = null) {
   const { today, week, streak } = stats;
 
-  if (event === "push") return "greet"; // 방금 푸시: 달려와서 반김
-  if (week === 0) return "sleepy"; // 일주일 내내 0: 동면
-  if (STREAK_MILESTONES.includes(streak)) return "celebrate"; // 스트릭 기념일
-  if (today >= 20) return "zoomies";
-  if (today >= 10) return "active";
-  if (today >= 1) return "normal";
-  return "calm"; // 오늘 0, 주간 커밋은 있음
+  if (event === 'push') return 'greet'; // 방금 푸시: 달려와서 반김
+  if (week === 0) return 'sleepy'; // 일주일 내내 0: 동면
+  if (STREAK_MILESTONES.includes(streak)) return 'celebrate'; // 스트릭 기념일
+  if (today >= 20) return 'zoomies';
+  if (today >= 10) return 'active';
+  if (today >= 1) return 'normal';
+  return 'calm'; // 오늘 0, 주간 커밋은 있음
 }
 
 // ---------------------------------------------------------------------------
@@ -38,7 +38,7 @@ function decideState(stats, seed, event = null) {
 /** days: [{date:"YYYY-MM-DD", count:n}, ...] 오름차순 */
 function computeStats(days, todayISO) {
   const byDate = new Map(days.map((d) => [d.date, d.count]));
-  const t = new Date(todayISO + "T00:00:00Z");
+  const t = new Date(todayISO + 'T00:00:00Z');
   const iso = (d) => d.toISOString().slice(0, 10);
   const daysAgo = (n) => iso(new Date(t.getTime() - n * 86400000));
 
@@ -69,11 +69,11 @@ async function fetchCalendar(username, token) {
       }
     }
   }`;
-  const res = await fetch("https://api.github.com/graphql", {
-    method: "POST",
+  const res = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
     headers: {
       Authorization: `bearer ${token}`,
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ query, variables: { login: username } }),
   });
@@ -101,7 +101,7 @@ function makeStatsSvg(stats, state, todayISO) {
     `week ${stats.week}`,
     `total ${stats.total}`,
     todayISO,
-  ].join("  \u00B7  ");
+  ].join('  \u00B7  ');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 32" width="880" height="32">
   <rect x="2" y="9" width="12" height="12" fill="#A0672F"/>
   <rect x="5" y="6" width="6" height="3" fill="#6B4423"/>
@@ -115,19 +115,19 @@ function makeStatsSvg(stats, state, todayISO) {
 
 // --mock "today=5,week=12" : API 호출 없이 임의 수치로 테스트
 function parseMock(argv) {
-  const i = argv.indexOf("--mock");
+  const i = argv.indexOf('--mock');
   if (i === -1) return null;
   const stats = { today: 0, yesterday: 0, week: 0, streak: 0, total: 0 };
-  for (const pair of (argv[i + 1] ?? "").split(",")) {
-    const [k, v] = pair.split("=");
+  for (const pair of (argv[i + 1] ?? '').split(',')) {
+    const [k, v] = pair.split('=');
     if (k in stats) stats[k] = Number(v);
   }
   return stats;
 }
 
 async function main() {
-  const event = process.argv.includes("--event")
-    ? process.argv[process.argv.indexOf("--event") + 1]
+  const event = process.argv.includes('--event')
+    ? process.argv[process.argv.indexOf('--event') + 1]
     : null;
   const mock = parseMock(process.argv);
 
@@ -136,7 +136,8 @@ async function main() {
   const now = new Date(Date.now() + tzOffset * 3600000);
   const todayISO = now.toISOString().slice(0, 10);
 
-  const username = process.env.GITHUB_USERNAME ?? "mock-user";
+  const username = process.env.GITHUB_USERNAME ?? 'mock-user';
+  const breed = process.env.BREED ?? 'dachshund'; // 견종 (dachshund | retriever)
   let stats;
   if (mock) {
     stats = mock;
@@ -144,7 +145,7 @@ async function main() {
     const token = process.env.GITHUB_TOKEN;
     if (!process.env.GITHUB_USERNAME || !token) {
       console.error(
-        "GITHUB_USERNAME과 GITHUB_TOKEN을 설정하세요 (또는 --mock 사용)",
+        'GITHUB_USERNAME과 GITHUB_TOKEN을 설정하세요 (또는 --mock 사용)',
       );
       process.exit(1);
     }
@@ -153,18 +154,22 @@ async function main() {
 
   const state = decideState(stats, `${username}:${todayISO}`, event);
 
-  const { composeScene, sceneFor } = require("./compose.js");
-  const dist = path.join(__dirname, "dist");
+  const { composeScene, sceneFor } = require('./compose.js');
+  const dist = path.join(__dirname, 'dist');
   fs.mkdirSync(dist, { recursive: true });
   // 시드에 시간을 넣어 실행 시각마다 장면 변형이 바뀌게 한다
-  const scene = sceneFor(state, `${username}:${todayISO}:${now.getUTCHours()}`);
-  fs.writeFileSync(path.join(dist, "dog.svg"), composeScene(scene));
+  const scene = sceneFor(
+    state,
+    `${username}:${todayISO}:${now.getUTCHours()}`,
+    breed,
+  );
+  fs.writeFileSync(path.join(dist, 'dog.svg'), composeScene(scene, breed));
   fs.writeFileSync(
-    path.join(dist, "stats.svg"),
+    path.join(dist, 'stats.svg'),
     makeStatsSvg(stats, state, todayISO),
   );
 
-  console.log(JSON.stringify({ todayISO, ...stats, state }, null, 2));
+  console.log(JSON.stringify({ breed, todayISO, ...stats, state }, null, 2));
 }
 
 module.exports = { decideState, computeStats };
