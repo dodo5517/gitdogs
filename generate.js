@@ -25,8 +25,8 @@ function decideState(stats, seed, event = null) {
   if (event === 'push') return 'greet'; // 방금 푸시: 달려와서 반김
   if (week === 0) return 'sleepy'; // 일주일 내내 0: 동면
   if (STREAK_MILESTONES.includes(streak)) return 'celebrate'; // 스트릭 기념일
-  if (today >= 20) return 'zoomies';
-  if (today >= 10) return 'active';
+  if (today >= 10) return 'zoomies';
+  if (today >= 4) return 'active';
   if (today >= 1) return 'normal';
   return 'calm'; // 오늘 0, 주간 커밋은 있음
 }
