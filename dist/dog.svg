@@ -1,0 +1,528 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 120" width="880" height="120">
+<defs>
+<g id="part_bounce">
+<g transform="translate(-32,50)">
+
+  <g transform="translate(30, 0)">
+    <ellipse cx="84" cy="70" rx="82" ry="4" fill="#000000" opacity="0.12"/>
+
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 6; 0 0" keyTimes="0; 0.5; 1" dur="0.3s"
+        calcMode="discrete" repeatCount="indefinite"/>
+
+      <g fill="#D48C3D">
+        <rect x="108" y="6" width="18" height="6"/> <rect x="108" y="12" width="24" height="6"/> <rect x="132" y="12" width="12" height="6"/> <rect x="108" y="18" width="24" height="6"/> <rect x="108" y="24" width="18" height="6"/> <rect x="42" y="18" width="66" height="6"/> <rect x="36" y="24" width="72" height="12"/> <rect x="36" y="36" width="6" height="6"/> </g>
+
+      <g fill="#E8BB7D">
+        <rect x="132" y="18" width="12" height="6"/> 
+        
+        <rect x="108" y="30" width="18" height="6"/>
+        <rect x="108" y="36" width="12" height="6"/>
+        
+        <rect x="42" y="36" width="66" height="6"/> 
+        
+        <rect x="48" y="42" width="6" height="6"/>
+        <rect x="60" y="42" width="6" height="6"/>
+        <rect x="72" y="42" width="6" height="6"/>
+        <rect x="84" y="42" width="6" height="6"/>
+        <rect x="96" y="42" width="6" height="6"/>
+      </g>
+
+      <g fill="#24150D">
+        <rect x="120" y="12" width="6" height="6"/> <rect x="144" y="12" width="6" height="6"/> </g>
+
+      <rect x="144" y="18" width="6" height="6" fill="#E08796"/>
+
+      <g>
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 0 6; 0 0" keyTimes="0; 0.5; 1" dur="0.3s" begin="0.075s"
+          calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="108" y="12" width="12" height="18" fill="#AA6323"/>
+      </g>
+
+      <g>
+        <g>
+          <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.2s" calcMode="discrete" repeatCount="indefinite"/>
+          <rect x="30" y="24" width="6" height="6" fill="#D48C3D"/> <rect x="18" y="24" width="12" height="6" fill="#D48C3D"/> <rect x="12" y="30" width="6" height="6" fill="#D48C3D"/> <rect x="18" y="30" width="12" height="6" fill="#E8BB7D"/>
+          <rect x="18" y="36" width="6" height="6" fill="#AA6323"/> </g>
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.2s" calcMode="discrete" repeatCount="indefinite"/>
+          <rect x="30" y="24" width="6" height="6" fill="#D48C3D"/>
+          <rect x="24" y="18" width="12" height="6" fill="#D48C3D"/>
+          <rect x="18" y="12" width="6" height="6" fill="#D48C3D"/>
+          
+          <rect x="24" y="24" width="12" height="6" fill="#E8BB7D"/>
+          <rect x="24" y="30" width="6" height="6" fill="#AA6323"/>
+        </g>
+      </g>
+    </g> <g opacity="1">
+      <animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;0.25;0.5;0.75;1" dur="0.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <rect x="96" y="42" width="12" height="24" fill="#D48C3D"/> <rect x="60" y="42" width="12" height="24" fill="#AA6323"/> <rect x="108" y="36" width="12" height="24" fill="#AA6323"/> <rect x="48" y="36" width="12" height="24" fill="#D48C3D"/> </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" dur="0.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <rect x="96" y="36" width="12" height="24" fill="#D48C3D"/> <rect x="60" y="36" width="12" height="24" fill="#AA6323"/> <rect x="108" y="36" width="12" height="24" fill="#AA6323"/> <rect x="48" y="36" width="12" height="24" fill="#D48C3D"/> </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" dur="0.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <rect x="108" y="42" width="12" height="24" fill="#AA6323"/> <rect x="48" y="42" width="12" height="24" fill="#D48C3D"/> <rect x="96" y="36" width="12" height="24" fill="#D48C3D"/> <rect x="60" y="36" width="12" height="24" fill="#AA6323"/> </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.25;0.5;0.75;1" dur="0.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <rect x="96" y="36" width="12" height="24" fill="#D48C3D"/> <rect x="60" y="36" width="12" height="24" fill="#AA6323"/> <rect x="108" y="36" width="12" height="24" fill="#AA6323"/> <rect x="48" y="36" width="12" height="24" fill="#D48C3D"/> </g>
+  </g>
+
+</g>
+</g>
+<g id="part_run">
+<g transform="translate(0,50)">
+
+  <!-- 화면을 가로지르며 질주하는 다크 카라멜 골든 리트리버 (Run / Gallop) -->
+  <!-- 6px 격자 기반: 모든 rect 좌표와 크기는 6의 배수, 꼬리 완벽 연결 -->
+  <!-- 귀의 펄럭임이 달리는 2프레임(0.36초) 주기에 100% 동기화됨 -->
+
+  <g>
+    <!-- 화면 왼쪽 밖에서 오른쪽 밖으로 질주하는 애니메이션 (5초) -->
+    
+
+    <!-- 지면 그림자 (공중에 뜰 때 그림자가 흐려짐) -->
+    <ellipse cx="84" cy="70" rx="84" ry="4" fill="#000000" opacity="0.12">
+      <animate attributeName="opacity" values="0.12; 0.04; 0.12" keyTimes="0; 0.5; 1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- 몸통 그룹: 뛰는 보폭에 맞춰 공중으로 바운스 (0.36초 주기) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 -6; 0 0" keyTimes="0; 0.5; 1" dur="0.36s"
+        calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 프레임 A: 길게 뻗은 자세 (Stretch / 앞뒷다리가 최대로 벌어짐) -->
+      <g>
+        <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
+        
+        <!-- 몸통 & 머리 & 꼬리 (베이스 골드) -->
+        <g fill="#D48C3D">
+          <rect x="120" y="12" width="18" height="6"/> <!-- 정수리 -->
+          <rect x="120" y="18" width="24" height="6"/> <!-- 눈가 -->
+          <rect x="144" y="18" width="12" height="6"/> <!-- 주둥이 윗부분 -->
+          <rect x="120" y="24" width="18" height="6"/> <!-- 뺨/목 -->
+          <rect x="42" y="24" width="78" height="6"/>  <!-- 평평하고 길어진 등 -->
+          <rect x="36" y="30" width="84" height="12"/> <!-- 몸통 중앙 -->
+          
+          <!-- 꼬리 (직선으로 뻗음) -->
+          <rect x="18" y="24" width="24" height="6"/> 
+          <rect x="6" y="24" width="12" height="6"/>  
+          
+          <!-- 앞다리 (앞으로 길게 뻗음) -->
+          <rect x="114" y="42" width="12" height="12"/>
+          <rect x="126" y="48" width="12" height="12"/>
+          <rect x="138" y="54" width="12" height="12"/>
+          
+          <!-- 뒷다리 (뒤로 길게 뻗음) -->
+          <rect x="30" y="42" width="12" height="12"/>
+          <rect x="18" y="48" width="12" height="12"/>
+          <rect x="6" y="54" width="12" height="12"/>
+        </g>
+
+        <!-- 크림색 장식털 (가슴, 배, 꼬리) -->
+        <g fill="#E8BB7D">
+          <rect x="144" y="24" width="12" height="6"/> <!-- 아래턱 -->
+          <rect x="120" y="30" width="18" height="6"/> <!-- 튀어나온 가슴섶 -->
+          <rect x="120" y="36" width="12" height="6"/>
+          <rect x="42" y="42" width="72" height="6"/>  <!-- 늘어난 배 -->
+          
+          <!-- 흩날리는 배 아래 프린지 -->
+          <rect x="54" y="48" width="6" height="6"/>
+          <rect x="66" y="48" width="6" height="6"/>
+          <rect x="78" y="48" width="6" height="6"/>
+          <rect x="90" y="48" width="6" height="6"/>
+          
+          <!-- 꼬리 깃털 -->
+          <rect x="18" y="30" width="18" height="6"/>
+        </g>
+
+        <!-- 배경쪽 다리 & 달리는 프레임에 맞춰 일자로 뻗은 귀 (음영 골드) -->
+        <g fill="#AA6323">
+          <!-- 바람에 뒤로 일자로 뻗으며 펄럭이는 귀 (타이밍 100% 동기화) -->
+          <rect x="108" y="18" width="12" height="12"/> <!-- 귀 베이스 -->
+          <rect x="96" y="18" width="12" height="6"/>   <!-- 귀 끝부분 -->
+          <rect x="90" y="12" width="6" height="6"/>    <!-- 위로 흩날리는 팁 -->
+
+          <!-- 배경 앞다리 -->
+          <rect x="102" y="42" width="12" height="12"/>
+          <rect x="114" y="48" width="12" height="12"/>
+          <rect x="126" y="54" width="12" height="6"/>
+          <!-- 배경 뒷다리 -->
+          <rect x="42" y="42" width="12" height="12"/>
+          <rect x="30" y="48" width="12" height="12"/>
+          <rect x="18" y="54" width="12" height="6"/>
+          
+          <rect x="18" y="36" width="12" height="6"/> <!-- 꼬리 깃털 그림자 -->
+        </g>
+
+        <!-- 이목구비 -->
+        <g fill="#24150D">
+          <rect x="132" y="18" width="6" height="6"/> <!-- 눈 -->
+          <rect x="150" y="18" width="6" height="6"/> <!-- 코 -->
+        </g>
+        <rect x="150" y="24" width="6" height="6" fill="#E08796"/> <!-- 혀 -->
+      </g>
+
+      <!-- 프레임 B: 수축한 자세 (Contract / 네 발이 공중에 뜨고 등이 굽음) -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
+        
+        <!-- 몸통 & 머리 & 꼬리 (베이스 골드) -->
+        <g fill="#D48C3D">
+          <rect x="114" y="18" width="18" height="6"/> <!-- 고개를 살짝 숙임 -->
+          <rect x="114" y="24" width="24" height="6"/>
+          <rect x="138" y="24" width="12" height="6"/>
+          <rect x="114" y="30" width="18" height="6"/>
+          
+          <rect x="48" y="18" width="66" height="6"/>  <!-- 활처럼 위로 굽은 등 -->
+          <rect x="42" y="24" width="72" height="12"/> <!-- 수축한 몸통 -->
+          <rect x="48" y="36" width="66" height="6"/>
+          
+          <!-- 꼬리 (살짝 위로 솟구침) -->
+          <rect x="24" y="18" width="24" height="6"/> 
+          <rect x="12" y="12" width="18" height="6"/> 
+          
+          <!-- 앞다리 (가슴 아래로 접어올림) -->
+          <rect x="96" y="36" width="12" height="12"/>
+          <rect x="84" y="48" width="12" height="12"/>
+          
+          <!-- 뒷다리 (배 아래로 깊숙이 당겨옴) -->
+          <rect x="48" y="42" width="12" height="12"/>
+          <rect x="60" y="54" width="12" height="6"/>
+        </g>
+
+        <!-- 크림색 장식털 (가슴, 배, 꼬리) -->
+        <g fill="#E8BB7D">
+          <rect x="138" y="30" width="12" height="6"/>
+          <rect x="114" y="36" width="18" height="6"/>
+          <rect x="54" y="42" width="48" height="6"/> <!-- 압축된 배털 -->
+          
+          <!-- 꼬리 깃털 -->
+          <rect x="24" y="24" width="18" height="6"/> 
+          <rect x="12" y="18" width="18" height="6"/>
+        </g>
+
+        <!-- 배경쪽 다리 & 관성으로 아래로 처지는 귀 (음영 골드) -->
+        <g fill="#AA6323">
+          <!-- 몸이 솟구치는 관성으로 깊게 처지는 귀 (타이밍 100% 동기화) -->
+          <rect x="102" y="24" width="12" height="12"/> <!-- 귀 베이스 -->
+          <rect x="96" y="30" width="6" height="12"/>   <!-- 귀 중간 -->
+          <rect x="90" y="36" width="6" height="6"/>    <!-- 아래로 꺾인 팁 -->
+
+          <!-- 배경 앞다리 접힘 -->
+          <rect x="108" y="36" width="12" height="6"/>
+          <rect x="96" y="42" width="12" height="12"/>
+          <!-- 배경 뒷다리 접힘 -->
+          <rect x="36" y="42" width="12" height="12"/>
+          <rect x="48" y="54" width="12" height="6"/>
+          
+          <rect x="24" y="30" width="12" height="6"/> <!-- 꼬리 깃털 그림자 -->
+        </g>
+
+        <!-- 이목구비 -->
+        <g fill="#24150D">
+          <rect x="126" y="24" width="6" height="6"/> <!-- 눈 -->
+          <rect x="144" y="24" width="6" height="6"/> <!-- 코 -->
+        </g>
+        <rect x="144" y="30" width="6" height="6" fill="#E08796"/> <!-- 혀 -->
+      </g>
+    </g>
+  </g>
+
+</g>
+</g>
+<g id="part_shake">
+<g transform="translate(-42,50)">
+
+  <!-- 부르르 털기(shake): 머리 → 몸통 순차 진동 / 투명 배경 / SMIL 전용 -->
+  <!-- 6px 격자, 오른쪽 응시 고정, 발바닥 y=66 정렬 -->
+  <!-- 팔레트: #D48C3D 골드 / #AA6323 다크골드 / #E8BB7D 애프리콧 / #24150D 눈코 / #E08796 혀 -->
+  <!-- 4s 주기: 머리 먼저 격하게 털고(≈1~1.8s) 그 여파가 몸통으로 이어짐(≈1.4~2.2s) -->
+
+  <g transform="translate(40 0)">
+    <!-- 지면 그림자 (고정) -->
+    <ellipse cx="84" cy="70" rx="82" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- 다리 (지면 고정) -->
+    <g>
+      <rect x="96" y="42" width="12" height="24" fill="#D48C3D"/> <!-- 앞다리 왼 -->
+      <rect x="60" y="42" width="12" height="24" fill="#AA6323"/> <!-- 뒷다리 오른 -->
+      <rect x="48" y="42" width="12" height="24" fill="#D48C3D"/> <!-- 뒷다리 왼 -->
+      <rect x="108" y="42" width="12" height="24" fill="#AA6323"/> <!-- 앞다리 오른 -->
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 2단계: 몸통 부르르 (머리 털기가 끝날 즈음 시작) -->
+    <!-- ========================================== -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 0; -6 4; 6 -4; -6 4; 6 -4; -4 2; 0 0; 0 0"
+        keyTimes="0; 0.35; 0.40; 0.45; 0.50; 0.55; 0.58; 0.62; 1"
+        dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 몸통 (골드) -->
+      <g fill="#D48C3D">
+        <rect x="42" y="18" width="66" height="6"/> <!-- 등 -->
+        <rect x="36" y="24" width="72" height="12"/> <!-- 몸통 중앙 -->
+        <rect x="36" y="36" width="6" height="6"/> <!-- 엉덩이 -->
+      </g>
+
+      <!-- 애프리콧 배 장식털 -->
+      <g fill="#E8BB7D">
+        <rect x="42" y="36" width="66" height="6"/>
+        <rect x="48" y="42" width="6" height="6"/>
+        <rect x="60" y="42" width="6" height="6"/>
+        <rect x="72" y="42" width="6" height="6"/>
+        <rect x="84" y="42" width="6" height="6"/>
+        <rect x="96" y="42" width="6" height="6"/>
+      </g>
+
+      <!-- 꼬리: 몸통 털릴 때 잔상 (2프레임 교대) -->
+      <g>
+        <animate attributeName="opacity" values="1;1;0;1;0;1"
+          keyTimes="0; 0.35; 0.42; 0.48; 0.54; 0.62"
+          dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="30" y="24" width="6" height="6" fill="#D48C3D"/>
+        <rect x="18" y="24" width="12" height="6" fill="#D48C3D"/>
+        <rect x="12" y="30" width="6" height="6" fill="#D48C3D"/>
+        <rect x="18" y="30" width="12" height="6" fill="#E8BB7D"/>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;0;1;0"
+          keyTimes="0; 0.35; 0.42; 0.48; 0.54; 0.62"
+          dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="30" y="24" width="6" height="6" fill="#D48C3D"/>
+        <rect x="24" y="18" width="12" height="6" fill="#D48C3D"/>
+        <rect x="18" y="12" width="6" height="6" fill="#D48C3D"/>
+        <rect x="24" y="24" width="12" height="6" fill="#E8BB7D"/>
+      </g>
+    </g>
+
+    <!-- ========================================== -->
+    <!-- 1단계: 머리 부르르 (가장 먼저, 가장 격하게) -->
+    <!-- ========================================== -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 0; -6 0; 6 0; -6 0; 6 0; -6 0; 6 0; -6 0; 6 0; 0 0; 0 0"
+        keyTimes="0; 0.25; 0.28; 0.31; 0.34; 0.37; 0.40; 0.43; 0.46; 0.49; 0.52; 1"
+        dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 두상 (골드) -->
+      <g fill="#D48C3D">
+        <rect x="108" y="6" width="18" height="6"/>
+        <rect x="108" y="12" width="24" height="6"/>
+        <rect x="132" y="12" width="12" height="6"/>
+        <rect x="108" y="18" width="24" height="6"/>
+        <rect x="108" y="24" width="18" height="6"/>
+      </g>
+
+      <!-- 애프리콧 턱/가슴섶 -->
+      <g fill="#E8BB7D">
+        <rect x="132" y="18" width="12" height="6"/>
+        <rect x="108" y="30" width="18" height="6"/>
+        <rect x="108" y="36" width="12" height="6"/>
+      </g>
+
+      <!-- 코 (고정) -->
+      <rect x="144" y="12" width="6" height="6" fill="#24150D"/>
+      <!-- 혀 -->
+      <rect x="144" y="18" width="6" height="6" fill="#E08796"/>
+
+      <!-- 눈: 평소 뜬 눈 / 털 때 질끈 감음 -->
+      <g>
+        <animate attributeName="opacity" values="1;0;1"
+          keyTimes="0; 0.25; 0.52" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="120" y="12" width="6" height="6" fill="#24150D"/> <!-- 뜬 눈 -->
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;0"
+          keyTimes="0; 0.25; 0.52" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="120" y="16" width="6" height="2" fill="#24150D"/> <!-- 질끈 감은 눈 -->
+      </g>
+
+      <!-- 귀: 평소 처진 귀 / 털 때 양옆으로 펄럭이며 날림 -->
+      <g>
+        <animate attributeName="opacity" values="1;0;1"
+          keyTimes="0; 0.25; 0.52" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <rect x="108" y="12" width="12" height="18" fill="#AA6323"/> <!-- 차분한 귀 -->
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1;0"
+          keyTimes="0; 0.25; 0.52" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <!-- 수평으로 날아오른 귀 조각 -->
+        <rect x="96"  y="6"  width="12" height="6" fill="#AA6323"/> <!-- 뒤로 펄럭 -->
+        <rect x="90"  y="12" width="18" height="6" fill="#AA6323"/>
+        <rect x="132" y="6"  width="12" height="6" fill="#AA6323"/> <!-- 앞으로 펄럭 -->
+      </g>
+    </g>
+
+    <!-- 털 때 튀는 물방울/먼지 이펙트 -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;0"
+        keyTimes="0; 0.30; 0.55" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+      <rect x="90"  y="-6" width="6" height="6" fill="#E8BB7D"/>
+      <rect x="132" y="-12" width="6" height="6" fill="#D48C3D"/>
+      <rect x="156" y="6"  width="6" height="6" fill="#AA6323"/>
+      <rect x="24"  y="0"  width="6" height="6" fill="#E8BB7D"/>
+      <rect x="0"   y="12" width="6" height="6" fill="#D48C3D"/>
+    </g>
+  </g>
+
+</g>
+</g>
+<g id="part_playbow">
+<g transform="translate(-344,50)">
+
+  <!-- 플레이 바우(playbow): 앞다리 바닥, 엉덩이 높이, 혀 내밀고 정면 응시 / 투명 배경 / SMIL 전용 -->
+  <!-- 6px 격자, 오른쪽 응시 고정, 발바닥 y=66 정렬 -->
+  <!-- 팔레트: #D48C3D 골드 / #AA6323 다크골드 / #E8BB7D 애프리콧 / #24150D 눈코 / #E08796 혀 -->
+  <!-- 엉덩이 좌우 씰룩임 0.25s가 핵심 / 몸통은 두툼하게 -->
+
+  <g transform="translate(342 0)">
+    <!-- 지면 그림자 (고정) -->
+    <ellipse cx="84" cy="70" rx="82" ry="4" fill="#000000" opacity="0.12"/>
+
+    <!-- ================= 뒷부분: 엉덩이+뒷다리+꼬리 (좌우 씰룩임) ================= -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="-3 0; 3 0; -3 0" keyTimes="0; 0.5; 1"
+        dur="0.5s" calcMode="discrete" repeatCount="indefinite"/>
+
+      <!-- 뒷다리: 엉덩이에서 지면까지 두툼하게 -->
+      <rect x="30" y="36" width="18" height="30" fill="#AA6323"/> <!-- 뒷다리 오른(뒤) -->
+      <rect x="48" y="36" width="18" height="30" fill="#D48C3D"/> <!-- 뒷다리 왼(앞) -->
+      <rect x="30" y="60" width="18" height="6"  fill="#24150D" opacity="0.25"/> <!-- 뒷발 그늘 -->
+
+      <!-- 치켜든 엉덩이 (크고 둥근 볼륨) -->
+      <g fill="#D48C3D">
+        <rect x="30" y="6"  width="30" height="6"/>  <!-- 엉덩이 정점 -->
+        <rect x="24" y="12" width="48" height="6"/>
+        <rect x="24" y="18" width="54" height="6"/>
+        <rect x="24" y="24" width="60" height="6"/>  <!-- 엉덩이 최대 폭 -->
+        <rect x="30" y="30" width="54" height="6"/>
+        <rect x="36" y="36" width="48" height="6"/>  <!-- 허리로 이어지는 아랫배 -->
+      </g>
+      <!-- 엉덩이 뒤쪽 밝은 털 -->
+      <rect x="24" y="30" width="12" height="6" fill="#E8BB7D"/>
+      <rect x="30" y="36" width="6"  height="6" fill="#E8BB7D"/>
+
+      <!-- 치켜든 꼬리 (하늘로) -->
+      <rect x="18" y="0"  width="6"  height="6" fill="#E8BB7D"/>
+      <rect x="24" y="0"  width="12" height="6" fill="#D48C3D"/>
+      <rect x="30" y="6"  width="6"  height="6" fill="#D48C3D"/>
+    </g>
+
+    <!-- ================= 허리(고정): 두툼한 몸통으로 앞뒤 연결 ================= -->
+    <!-- 씰룩임 ±3px에도 틈이 안 벌어지도록 넉넉히 겹침 -->
+    <g fill="#D48C3D">
+      <rect x="60" y="18" width="30" height="6"/>  <!-- 허리 윗등 -->
+      <rect x="60" y="24" width="36" height="6"/>
+      <rect x="66" y="30" width="36" height="6"/>  <!-- 허리 중앙 -->
+      <rect x="72" y="36" width="36" height="6"/>  <!-- 허리 아랫배 (두툼) -->
+    </g>
+    <rect x="66" y="42" width="30" height="6" fill="#E8BB7D"/> <!-- 배 아래 밝은 털 -->
+
+    <!-- ================= 앞부분: 깊은 가슴 + 어깨 + 머리 (바닥에 고정) ================= -->
+    <!-- 등 topline: 허리 → 어깨로 완만히 하강 -->
+    <g fill="#D48C3D">
+      <rect x="90" y="24" width="18" height="6"/>  <!-- 등 어깨 상단 -->
+      <rect x="96" y="30" width="24" height="6"/>
+      <rect x="96" y="36" width="30" height="6"/>  <!-- 어깨 몸통 -->
+      <rect x="96" y="42" width="36" height="12"/> <!-- 깊은 가슴 (두툼) -->
+      <rect x="102" y="54" width="30" height="6"/> <!-- 가슴 아래 -->
+    </g>
+
+    <!-- 가슴 앞 애프리콧 장식털(ruff) -->
+    <g fill="#E8BB7D">
+      <rect x="96" y="48" width="12" height="12"/>
+      <rect x="90" y="42" width="12" height="6"/>
+    </g>
+
+    <!-- 앞다리: 바닥에 낮게 접혀 붙음 + 앞으로 뻗은 발 -->
+    <rect x="108" y="54" width="12" height="12" fill="#AA6323"/> <!-- 앞다리 오른(뒤) -->
+    <rect x="120" y="54" width="12" height="12" fill="#D48C3D"/> <!-- 앞다리 왼(앞) -->
+    <rect x="132" y="60" width="30" height="6"  fill="#E8BB7D"/> <!-- 앞으로 뻗은 발 -->
+    <rect x="156" y="60" width="6"  height="6"  fill="#AA6323"/> <!-- 발끝 음영 -->
+
+    <!-- 머리: 바닥 가까이 낮추되 정면(오른쪽) 응시, 두상 큼직하게 -->
+    <g fill="#D48C3D">
+      <rect x="126" y="36" width="30" height="6"/> <!-- 정수리 -->
+      <rect x="126" y="42" width="30" height="6"/> <!-- 윗머리 -->
+      <rect x="156" y="42" width="12" height="6"/> <!-- 주둥이 윗부분 -->
+      <rect x="126" y="48" width="24" height="6"/> <!-- 뺨 -->
+    </g>
+
+    <!-- 애프리콧 턱 -->
+    <rect x="150" y="48" width="18" height="6" fill="#E8BB7D"/>
+
+    <!-- 눈 & 코 (정면 응시) -->
+    <g fill="#24150D">
+      <rect x="144" y="42" width="6" height="6"/> <!-- 눈 -->
+      <rect x="168" y="42" width="6" height="6"/> <!-- 코 -->
+    </g>
+
+    <!-- 내민 혀 (플레이풀, 아래로 쏙) -->
+    <rect x="168" y="48" width="6" height="6" fill="#E08796"/>
+    <rect x="168" y="54" width="6" height="6" fill="#E08796"/>
+
+    <!-- 앞으로 늘어진 큰 귀 -->
+    <rect x="126" y="42" width="12" height="18" fill="#AA6323"/>
+  </g>
+
+</g>
+</g>
+</defs>
+<g>
+<animate attributeName="opacity" values="1;0" keyTimes="0;0.1613" dur="31s" calcMode="discrete" repeatCount="indefinite"/>
+<g transform="translate(340,0)">
+
+<g><use href="#part_bounce"/></g>
+</g>
+</g>
+
+<g opacity="0">
+<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.1613;0.2903" dur="31s" calcMode="discrete" repeatCount="indefinite"/>
+<g>
+<animateTransform attributeName="transform" type="translate" values="340 0; 340 0; 660 -12; 660 -12" keyTimes="0; 0.1613; 0.2903; 1" dur="31s" repeatCount="indefinite"/>
+<g><use href="#part_run"/></g>
+</g>
+</g>
+
+<g opacity="0">
+<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2903;0.4516" dur="31s" calcMode="discrete" repeatCount="indefinite"/>
+<g transform="translate(660,-12)">
+
+<g><use href="#part_shake"/></g>
+</g>
+</g>
+
+<g opacity="0">
+<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.4516;0.6452" dur="31s" calcMode="discrete" repeatCount="indefinite"/>
+<g>
+<animateTransform attributeName="transform" type="translate" values="660 -12; 660 -12; 60 -4; 60 -4" keyTimes="0; 0.4516; 0.6452; 1" dur="31s" repeatCount="indefinite"/>
+<g transform="translate(168,0) scale(-1,1)"><use href="#part_run"/></g>
+</g>
+</g>
+
+<g opacity="0">
+<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.6452;0.8387" dur="31s" calcMode="discrete" repeatCount="indefinite"/>
+<g transform="translate(60,-4)">
+
+<g transform="translate(172,0) scale(-1,1)"><use href="#part_playbow"/></g>
+</g>
+</g>
+
+<g opacity="0">
+<animate attributeName="opacity" values="0;1" keyTimes="0;0.8387" dur="31s" calcMode="discrete" repeatCount="indefinite"/>
+<g>
+<animateTransform attributeName="transform" type="translate" values="60 -4; 60 -4; 340 0" keyTimes="0; 0.8387; 1" dur="31s" repeatCount="indefinite"/>
+<g><use href="#part_run"/></g>
+</g>
+</g>
+</svg>
