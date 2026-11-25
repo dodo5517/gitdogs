@@ -62,13 +62,12 @@ function composeScene(segments, breed = 'dachshund') {
   const frag = (n) => loadFrag(breed, n);
   const total = segments.reduce((s, x) => s + x.dur, 0);
 
-  // 검증: 화면 이탈 및 루프 닫힘 (마지막 위치 == 시작 위치)
-  for (const s of segments) {
-    const w = META[s.motion].width;
-    for (const q of [s.from, s.to])
-      if (q.x < 0 || q.x + w > 880)
-        console.warn(`[compose] 화면 이탈: ${s.motion} x=${q.x} (w=${w})`);
-  }
+  // 모든 모션을 그림자 중심(anchor)에 맞춰 배치한다. 모션마다 폭이 달라도 자세가 바뀔 때 몸이 옆으로 튀지 않는다.
+  // 기준점은 walk의 anchor로, 좌표 x는 walk 부품의 왼쪽 끝 위치와 같은 의미를 유지한다.
+  const anchorOf = (n) => META[n].anchor ?? META[n].width / 2;
+  const REF = META.walk ? anchorOf('walk') : 0;
+
+  // 검증: 루프 닫힘 (마지막 위치 == 시작 위치)
   const first = segments[0],
     last = segments[segments.length - 1];
   if (first.from.x !== last.to.x || first.from.y !== last.to.y)
@@ -94,9 +93,18 @@ function composeScene(segments, breed = 'dachshund') {
       const face =
         s.face ?? (moving ? (s.to.x < s.from.x ? 'left' : 'right') : facing);
       facing = face;
-      // 왼쪽을 볼 때는 부품 폭 기준으로 좌우 반전
+      // 부품의 anchor가 x+REF에 오도록 놓고, 왼쪽을 볼 때는 그 점을 축으로 좌우 반전
+      const a = anchorOf(s.motion);
       const flip =
-        face === 'left' ? ` transform="translate(${w},0) scale(-1,1)"` : '';
+        face === 'left'
+          ? ` transform="translate(${REF + a},0) scale(-1,1)"`
+          : REF === a
+            ? ''
+            : ` transform="translate(${REF - a},0)"`;
+      const left = face === 'left' ? REF + a - w : REF - a;
+      for (const q of [s.from, s.to])
+        if (q.x + left < 0 || q.x + left + w > 880)
+          console.warn(`[compose] 화면 이탈: ${s.motion} x=${q.x} (w=${w})`);
       const vis = opacityWindow(k0, k1, total);
       const mov = movement(s.from, s.to, k0, k1, total);
       return [
