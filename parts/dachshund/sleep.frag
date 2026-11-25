@@ -1,11 +1,11 @@
-<g transform="translate(-340,12)">
+<g transform="translate(-340,18)">
 
   <!-- 2. 바닥에 완전히 엎드린 닥스훈트 (초미니 다리 스플루트 자세) -->
   <!-- 색상: 브라운 #A0672F, 진갈색 #6B4423, 탠 #D9B285, 눈/코 #2E1F14 -->
   <g transform="translate(340, 20)">
     
     <!-- 바닥 그림자 -->
-    <ellipse cx="90" cy="80" rx="90" ry="4" fill="#000000" opacity="0.12"/>
+    <ellipse cx="90" cy="82" rx="90" ry="4" fill="#000000" opacity="0.12"/>
 
     <!-- 바닥에 뻗은 극단적으로 짧은 다리 (고정) -->
     <g>

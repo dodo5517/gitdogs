@@ -1,4 +1,4 @@
-<g transform="translate(-360,-4)">
+<g transform="translate(-360,4)">
 
   <!-- 3. 제자리에서 땅 파기 (기존 베이스 100% 유지 + 90도 꺾인 머리 + 위로 튀는 흙) -->
   <!-- 중앙 고정 배치 (translate 360, 46) -->

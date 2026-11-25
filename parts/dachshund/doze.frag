@@ -1,4 +1,4 @@
-<g transform="translate(-88,-4)">
+<g transform="translate(-88,4)">
 
   <!-- 3. 앉아서 졸기 (식빵 자세에서 고개 떨구기) -->
   <g transform="translate(100, 46)">

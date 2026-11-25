@@ -1,4 +1,4 @@
-<g transform="translate(-334,44)">
+<g transform="translate(-334,50)">
 
   <!-- 배 까고 꿀잠 자는 다크 카라멜 골든 리트리버 (Belly-up Relaxed Sleep) / 투명 배경 / SMIL 전용 -->
   <!-- 6px 격자 기반: 모든 rect 좌표와 크기는 6의 배수, 픽셀 틈새 0% -->
@@ -12,10 +12,10 @@
     <!-- 1. 바닥에 완전히 밀착된 고정 바디, 머리, 꼬리 (숨 쉴 때 틈새 방지) -->
     <g>
       <!-- 바닥에 깔린 깃털 꼬리 -->
-      <rect x="18" y="54" width="24" height="6" fill="#D48C3D"/> <!-- 꼬리 베이스 -->
-      <rect x="12" y="60" width="30" height="6" fill="#D48C3D"/> <!-- 꼬리 메인 -->
-      <rect x="18" y="66" width="18" height="6" fill="#E8BB7D"/> <!-- 꼬리 끝 크림 깃털 -->
-      <rect x="12" y="66" width="6" height="6" fill="#AA6323"/>  <!-- 깃털 음영 -->
+      <rect x="18" y="48" width="24" height="6" fill="#D48C3D"/> <!-- 꼬리 베이스 -->
+      <rect x="12" y="54" width="30" height="6" fill="#D48C3D"/> <!-- 꼬리 메인 -->
+      <rect x="18" y="60" width="18" height="6" fill="#E8BB7D"/> <!-- 꼬리 끝 크림 깃털 -->
+      <rect x="12" y="60" width="6" height="6" fill="#AA6323"/>  <!-- 깃털 음영 -->
 
       <!-- 바닥에 닿은 넓은 등과 목 (베이스 골드) -->
       <rect x="42" y="60" width="78" height="6" fill="#D48C3D"/> <!-- 지면 밀착 부분 -->

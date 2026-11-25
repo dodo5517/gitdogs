@@ -2,7 +2,8 @@
 // 사용법: node normalize.js <견종>
 //
 // - 화면을 가로지르는 이동 애니메이션(translate 범위가 큰 animateTransform)을 제거한다.
-// - 그림자를 포함한 경계 상자의 왼쪽 끝을 x=0에, 발바닥(가장 낮은 rect 하단)을 지면 y=116에 맞춘다.
+// - 그림자를 포함한 경계 상자의 왼쪽 끝을 x=0에, 그림자 윗선(그림자가 없으면 가장 낮은 rect 하단)을 지면 y=116에 맞춘다.
+// - 그림자 중심 x를 meta.anchor로 기록한다. compose.js는 이 점을 기준으로 배치하고 좌우 반전한다.
 // - id와 그 참조에 <견종>_<모션>_ 접두사를 붙여 장면 안에서 충돌하지 않게 한다.
 // rect, ellipse, translate(그룹)만 경계 계산에 반영한다 (rotate 등은 무시).
 const fs = require('fs');
@@ -36,6 +37,7 @@ function bbox(src) {
     maxX = -Infinity,
     maxY = -Infinity,
     ground = -Infinity;
+  let shadow = null;
   const add = (x0, y0, x1, y1) => {
     minX = Math.min(minX, x0);
     minY = Math.min(minY, y0);
@@ -69,9 +71,11 @@ function bbox(src) {
       const rx = attr(tag, 'rx'),
         ry = attr(tag, 'ry');
       add(cx - rx, cy - ry, cx + rx, cy + ry);
+      shadow ??= { cx, ground: cy - ry };
     }
   }
-  return { minX, minY, maxX, maxY, ground };
+  // 그림자 윗선이 곧 지면이다. 공중에 뜬 모션(질주 등)도 그림자 기준으로 맞춰야 높이가 튀지 않는다.
+  return { minX, minY, maxX, maxY, ground: shadow ? shadow.ground : ground, anchor: shadow?.cx };
 }
 
 function normalize(breed) {
@@ -97,6 +101,7 @@ function normalize(breed) {
       `<g transform="translate(${dx},${dy})">\n${src}\n</g>\n`,
     );
     meta[motion] = { width: b.maxX - b.minX, height: b.maxY - b.minY };
+    if (b.anchor !== undefined) meta[motion].anchor = b.anchor - b.minX;
   }
   fs.writeFileSync(path.join(outDir, 'meta.json'), JSON.stringify(meta, null, 2));
   return meta;

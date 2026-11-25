@@ -1,4 +1,4 @@
-<g transform="translate(-100,-4)">
+<g transform="translate(-100,4)">
 
   <!-- 2. 제자리 잔뛰기 (Bounce with Anticipation & Spline) -->
   <!-- 색상: 브라운 #A0672F, 진갈색 #6B4423, 탠 #D9B285, 눈/코 #2E1F14 -->

@@ -1,4 +1,4 @@
-<g transform="translate(-360,-4)">
+<g transform="translate(-360,4)">
 
   <!-- 2. 제자리에 서서 짖기 (기존 베이스 모델 유지 + 입 벌림 애니메이션) -->
   <!-- 중앙에 배치 (translate 360, 46) -->

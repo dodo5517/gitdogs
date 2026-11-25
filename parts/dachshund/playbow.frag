@@ -1,4 +1,4 @@
-<g transform="translate(-100,-4)">
+<g transform="translate(-100,4)">
 
   <!-- 1. 플레이 바우 (Play Bow) -->
   <!-- 색상: 브라운 #A0672F, 진갈색 #6B4423, 탠 #D9B285, 눈/코 #2E1F14, 혀 #ED94A4 -->

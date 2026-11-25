@@ -1,4 +1,4 @@
-<g transform="translate(0,42)">
+<g transform="translate(0,50)">
 
   <!-- Walking pixel dachshund / transparent background / SMIL only -->
   <!-- palette: brown #A0672F, dark brown #6B4423, tan #D9B285, dark #2E1F14 -->

@@ -1,4 +1,4 @@
-<g transform="translate(0,38)">
+<g transform="translate(0,56)">
 
   <!-- 1. 달리기 (갤럽 모션) / 투명 배경 / SMIL 애니메이션 -->
   <!-- 색상: 브라운 #A0672F, 진갈색 #6B4423, 탠 #D9B285, 눈/코 #2E1F14 -->
@@ -7,7 +7,7 @@
     
 
     <!-- 바닥 그림자 (프레임에 맞춰 크기와 위치가 약간 변함) -->
-    <ellipse cx="100" cy="74" rx="100" ry="4" fill="#000000" opacity="0.12">
+    <ellipse cx="100" cy="64" rx="100" ry="4" fill="#000000" opacity="0.12">
       <animate attributeName="rx" values="100; 70; 100" keyTimes="0;0.5;1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
       <animate attributeName="cx" values="100; 110; 100" keyTimes="0;0.5;1" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
     </ellipse>

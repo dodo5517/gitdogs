@@ -1,4 +1,4 @@
-<g transform="translate(-42,50)">
+<g transform="translate(-40,50)">
 
   <!-- 부르르 털기(shake): 머리 → 몸통 순차 진동 / 투명 배경 / SMIL 전용 -->
   <!-- 6px 격자, 오른쪽 응시 고정, 발바닥 y=66 정렬 -->

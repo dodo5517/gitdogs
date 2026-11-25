@@ -4,7 +4,7 @@
   <g transform="translate(400, 10)">
     
     <!-- 바닥 그림자 -->
-    <ellipse cx="42" cy="100" rx="50" ry="4" fill="#000000" opacity="0.12"/>
+    <ellipse cx="42" cy="106" rx="50" ry="4" fill="#000000" opacity="0.12"/>
 
     <!-- 바닥에 깔고 앉은 꼬리 (위아래로 흔들림) -->
     <g>

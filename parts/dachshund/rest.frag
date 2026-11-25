@@ -1,11 +1,11 @@
-<g transform="translate(-344,-8)">
+<g transform="translate(-344,-2)">
 
   <!-- 3. 바닥에 엎드려 쉬기 (Awake Sploot) / 눈 깜빡임, 꼬리 까딱, 귀 쫑긋 추가 -->
   <!-- 중앙에 배치 (translate 360, 46) -->
   <g transform="translate(360, 46)">
     
     <!-- 바닥 그림자 (엎드린 몸에 맞춰 넓게 퍼짐) -->
-    <ellipse cx="84" cy="74" rx="100" ry="4" fill="#000000" opacity="0.12"/>
+    <ellipse cx="84" cy="76" rx="100" ry="4" fill="#000000" opacity="0.12"/>
 
     <!-- 바닥에 앞뒤로 뻗은 다리 (기존 12x6 블록 유지) -->
     <!-- 뒤로 뻗은 뒷다리 -->
