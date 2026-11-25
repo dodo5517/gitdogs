@@ -22,7 +22,7 @@
 
     <!-- 숨쉬기 애니메이션 (몸통, 머리 전체가 납작하게 오르내림) -->
     <g>
-      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" keyTimes="0;0.5;1" dur="2.4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,2; 0,0" keyTimes="0;0.5;1" dur="2.4s" repeatCount="indefinite"/>
       
       <!-- 바닥에 뉘여진 꼬리 -->
       <rect x="30" y="66" width="18" height="6" fill="#A0672F"/>

@@ -19,14 +19,14 @@
       <g>
         <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1"
           dur="0.6s" calcMode="discrete" repeatCount="indefinite"/>
-        <rect x="0"  y="12" width="6" height="6" fill="#A0672F"/>
-        <rect x="6"  y="18" width="6" height="6" fill="#A0672F"/>
+        <rect x="0" y="12" width="12" height="6" fill="#A0672F"/>
+        <rect x="6" y="18" width="12" height="6" fill="#A0672F"/>
       </g>
       <g opacity="0">
         <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1"
           dur="0.6s" calcMode="discrete" repeatCount="indefinite"/>
-        <rect x="0"  y="6"  width="6" height="6" fill="#A0672F"/>
-        <rect x="6"  y="12" width="6" height="6" fill="#A0672F"/>
+        <rect x="6" y="6" width="12" height="6" fill="#A0672F"/>
+        <rect x="12" y="12" width="6" height="12" fill="#A0672F"/>
       </g>
       <!-- tail root (fixed) -->
       <rect x="12" y="24" width="6" height="6" fill="#A0672F"/>

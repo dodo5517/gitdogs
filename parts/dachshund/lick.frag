@@ -13,12 +13,12 @@
     <g>
       <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" calcMode="discrete" repeatCount="indefinite"/>
       <rect x="-6" y="66" width="18" height="6" fill="#A0672F"/>
-      <rect x="-12" y="60" width="6" height="6" fill="#A0672F"/>
+      <rect x="-12" y="60" width="12" height="6" fill="#A0672F"/>
     </g>
     <g opacity="0">
       <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.6s" calcMode="discrete" repeatCount="indefinite"/>
       <rect x="-6" y="66" width="18" height="6" fill="#A0672F"/>
-      <rect x="-12" y="72" width="6" height="6" fill="#A0672F"/>
+      <rect x="-12" y="72" width="12" height="6" fill="#A0672F"/>
     </g>
 
     <!-- 먼 쪽 앞다리 (바닥 지지용) -->

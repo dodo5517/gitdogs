@@ -21,8 +21,8 @@
       <rect x="0" y="30" width="24" height="6" fill="#A0672F"/>
       
       <!-- 뒷다리 (뒤로 최대한 뻗음) -->
-      <rect x="0" y="48" width="18" height="6" fill="#6B4423"/> <!-- 먼 다리 -->
-      <rect x="6" y="54" width="18" height="6" fill="#A0672F"/> <!-- 가까운 다리 -->
+      <rect x="0" y="48" width="30" height="6" fill="#6B4423"/> <!-- 먼 다리 -->
+      <rect x="6" y="54" width="18" height="6" fill="#A0672F"/><rect x="24" y="54" width="12" height="6" fill="#A0672F"/> <!-- 가까운 다리 -->
       <rect x="18" y="54" width="6" height="6" fill="#D9B285"/> <!-- 가까운 발 -->
       
       <!-- 길어진 몸통 (길이 138px) -->
@@ -42,8 +42,8 @@
       <rect x="174" y="18" width="6" height="6" fill="#2E1F14"/> <!-- 눈 -->
       
       <!-- 앞다리 (앞으로 최대한 뻗음) -->
-      <rect x="162" y="48" width="18" height="6" fill="#6B4423"/> <!-- 먼 다리 -->
-      <rect x="168" y="54" width="18" height="6" fill="#A0672F"/> <!-- 가까운 다리 -->
+      <rect x="150" y="48" width="30" height="6" fill="#6B4423"/> <!-- 먼 다리 -->
+      <rect x="150" y="54" width="36" height="6" fill="#A0672F"/> <!-- 가까운 다리 -->
       <rect x="180" y="54" width="6" height="6" fill="#D9B285"/> <!-- 가까운 발 -->
     </g>
 

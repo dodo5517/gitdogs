@@ -16,7 +16,7 @@
 
     <!-- 숨쉬기에 맞춰 상체가 아주 미세하게 오르내림 -->
     <g>
-      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0" keyTimes="0;0.5;1" dur="2.4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 2; 0 0" keyTimes="0;0.5;1" dur="2.4s" repeatCount="indefinite"/>
 
       <!-- ========================================== -->
       <!-- [추가] 심심한 듯 까딱거리는 꼬리 (3.2초 주기) -->
@@ -30,8 +30,8 @@
       <g opacity="0">
         <!-- 바닥을 톡톡 치며 위로 살짝 들린 꼬리 -->
         <animate attributeName="opacity" values="0;1;0;1;0" keyTimes="0; 0.85; 0.9; 0.95; 1" dur="3.2s" calcMode="discrete" repeatCount="indefinite"/>
-        <rect x="6" y="48" width="6" height="6" fill="#A0672F"/>
-        <rect x="0" y="42" width="6" height="6" fill="#A0672F"/>
+        <rect x="6" y="48" width="12" height="6" fill="#A0672F"/>
+        <rect x="0" y="42" width="12" height="6" fill="#A0672F"/>
       </g>
 
       <!-- 기존 베이스 몸통 100% 동일, y축만 18px 내려 바닥에 닿게 함 -->

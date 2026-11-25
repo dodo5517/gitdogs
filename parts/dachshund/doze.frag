@@ -7,7 +7,7 @@
     <ellipse cx="84" cy="70" rx="90" ry="4" fill="#000000" opacity="0.12"/>
 
     <!-- 바닥에 밀착한 뒷다리 (뒤로 뻗음) -->
-    <rect x="-6" y="60" width="12" height="6" fill="#A0672F"/>
+    <rect x="-6" y="60" width="18" height="6" fill="#A0672F"/>
     <rect x="-12" y="60" width="6" height="6" fill="#D9B285"/>
     
     <!-- 바닥에 밀착한 앞다리 (앞으로 뻗음) -->
