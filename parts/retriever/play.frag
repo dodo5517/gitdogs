@@ -50,13 +50,13 @@
       <g>
         <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.4s" calcMode="discrete" repeatCount="indefinite"/>
         <rect x="24" y="6"  width="12" height="6" fill="#D48C3D"/>
-        <rect x="30" y="12" width="6"  height="6" fill="#D48C3D"/>
+        <rect x="30" y="12" width="6" height="6" fill="#D48C3D"/><rect x="36" y="12" width="6" height="12" fill="#D48C3D"/>
         <rect x="18" y="6"  width="6"  height="6" fill="#E8BB7D"/>
       </g>
       <g opacity="0">
         <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.4s" calcMode="discrete" repeatCount="indefinite"/>
         <rect x="24" y="0"  width="12" height="6" fill="#D48C3D"/>
-        <rect x="30" y="6"  width="6"  height="6" fill="#D48C3D"/>
+        <rect x="30" y="6" width="6" height="6" fill="#D48C3D"/><rect x="36" y="6" width="6" height="18" fill="#D48C3D"/>
         <rect x="18" y="0"  width="6"  height="6" fill="#E8BB7D"/>
       </g>
     </g>

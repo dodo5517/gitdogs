@@ -46,7 +46,7 @@
           <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.2s" calcMode="discrete" repeatCount="indefinite"/>
           <rect x="30" y="24" width="6" height="6" fill="#D48C3D"/>
           <rect x="24" y="18" width="12" height="6" fill="#D48C3D"/>
-          <rect x="18" y="12" width="6" height="6" fill="#D48C3D"/>
+          <rect x="18" y="12" width="12" height="6" fill="#D48C3D"/>
           
           <rect x="24" y="24" width="12" height="6" fill="#E8BB7D"/>
           <rect x="24" y="30" width="6" height="6" fill="#AA6323"/>

@@ -23,7 +23,7 @@
     <g opacity="0">
       <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.7s" calcMode="discrete" repeatCount="indefinite"/>
       <rect x="12" y="42" width="18" height="6" fill="#D48C3D"/>
-      <rect x="6"  y="36" width="6"  height="6" fill="#E8BB7D"/>
+      <rect x="6"  y="36" width="12" height="6" fill="#E8BB7D"/>
     </g>
 
     <!-- 세운 상체 -->
@@ -58,7 +58,7 @@
     <rect x="96" y="54" width="12" height="12" fill="#AA6323"/>
     <rect x="84" y="60" width="30" height="6"  fill="#E8BB7D"/>
 
-    <!-- ===== 머리 그룹: 좌우로 갸웃 (rotate 2프레임) ===== -->
+    <!-- ===== 머리 그룹: 갸웃 (2프레임) ===== -->
     <!-- 똑바로 프레임 -->
     <g>
       <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.3;0.31;0.7;0.71;1" dur="3s" calcMode="discrete" repeatCount="indefinite"/>
@@ -77,25 +77,23 @@
       <rect x="126" y="12" width="6" height="6" fill="#E08796"/>
       <rect x="84" y="6" width="12" height="18" fill="#AA6323"/>
     </g>
-    <!-- 갸웃 프레임 (머리 전체를 살짝 기울임: 한쪽 귀 내려오고 반대쪽 올라감) -->
+    <!-- 갸웃 프레임: 얼굴 앞쪽을 한 칸 내려 고개를 기울인 모습 (격자 유지) -->
     <g opacity="0">
       <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3;0.31;0.7;0.71;1" dur="3s" calcMode="discrete" repeatCount="indefinite"/>
-      <g transform="rotate(14 105 12)">
-        <g fill="#D48C3D">
-          <rect x="84" y="0"  width="30" height="6"/>
-          <rect x="84" y="6"  width="30" height="6"/>
-          <rect x="114" y="6" width="12" height="6"/>
-          <rect x="84" y="12" width="24" height="6"/>
-          <rect x="108" y="12" width="6" height="6"/> <!-- 뺨~턱 사이 빈칸 메움 -->
-        </g>
-        <rect x="114" y="12" width="12" height="6" fill="#E8BB7D"/>
-        <g fill="#24150D">
-          <rect x="102" y="6" width="6" height="6"/>
-          <rect x="126" y="6" width="6" height="6"/>
-        </g>
-        <rect x="126" y="12" width="6" height="6" fill="#E08796"/>
-        <rect x="84" y="6" width="12" height="18" fill="#AA6323"/> <!-- 갸웃으로 더 처진 귀 -->
+      <g fill="#D48C3D">
+        <rect x="84" y="0"  width="18" height="6"/>
+        <rect x="84" y="6"  width="30" height="6"/>
+        <rect x="84" y="12" width="30" height="6"/>
+        <rect x="114" y="12" width="12" height="6"/>
+        <rect x="90" y="18" width="24" height="6"/>
       </g>
+      <rect x="114" y="18" width="12" height="6" fill="#E8BB7D"/>
+      <g fill="#24150D">
+        <rect x="102" y="12" width="6" height="6"/>
+        <rect x="126" y="12" width="6" height="6"/>
+      </g>
+      <rect x="126" y="18" width="6" height="6" fill="#E08796"/>
+      <rect x="84" y="6" width="12" height="18" fill="#AA6323"/>
     </g>
   </g>
 

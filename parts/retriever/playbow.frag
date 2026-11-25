@@ -12,7 +12,7 @@
     <!-- ================= 뒷부분: 엉덩이+뒷다리+꼬리 (좌우 씰룩임) ================= -->
     <g>
       <animateTransform attributeName="transform" type="translate"
-        values="-3 0; 3 0; -3 0" keyTimes="0; 0.5; 1"
+        values="0 0; -6 0; 0 0" keyTimes="0; 0.5; 1"
         dur="0.5s" calcMode="discrete" repeatCount="indefinite"/>
 
       <!-- 뒷다리: 엉덩이에서 지면까지 두툼하게 -->
@@ -40,7 +40,7 @@
     </g>
 
     <!-- ================= 허리(고정): 두툼한 몸통으로 앞뒤 연결 ================= -->
-    <!-- 씰룩임 ±3px에도 틈이 안 벌어지도록 넉넉히 겹침 -->
+    <!-- 씰룩임 6px에도 틈이 안 벌어지도록 넉넉히 겹침 -->
     <g fill="#D48C3D">
       <rect x="60" y="18" width="30" height="6"/>  <!-- 허리 윗등 -->
       <rect x="60" y="24" width="36" height="6"/>

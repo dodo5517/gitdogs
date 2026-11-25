@@ -24,7 +24,7 @@
       <g opacity="0">
         <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="0.8s" calcMode="discrete" repeatCount="indefinite"/>
         <rect x="12" y="42" width="18" height="6" fill="#D48C3D"/>
-        <rect x="6"  y="36" width="6"  height="6" fill="#E8BB7D"/>
+        <rect x="6" y="36" width="12" height="6" fill="#E8BB7D"/>
       </g>
     </g>
 
