@@ -36,9 +36,23 @@ GitHub 잔디로 키우는 픽셀 강아지.
 | 리트리버 | `retriever` | 처진 귀, 깃털 꼬리            |
 | 비숑     | `bichon`    | 솜사탕 같은 둥근 머리, 말린 꼬리 |
 
+견종별 샘플 (걷기 → 물고 달리기 → 견종 전용 반응 → 돌아오기):
+
+**닥스훈트** `dachshund`
+
+![닥스훈트 샘플](samples/dachshund.svg)
+
+**리트리버** `retriever`
+
+![리트리버 샘플](samples/retriever.svg)
+
+**비숑** `bichon`
+
+![비숑 샘플](samples/bichon.svg)
+
 Settings → Secrets and variables → Actions → **Variables** 탭에서 `BREED` 변수를 만들어 값을 넣으면 강아지가 교체됩니다. 변수를 만들지 않으면 기본값 `dachshund`가 적용됩니다.
 
-모든 견종은 공통 모션 12종을 공유하고, 그 위에 견종 전용 슬롯(play·react·observe)을 각자의 방식으로 채웁니다. 예를 들어 play 슬롯은 리트리버가 공을, 닥스훈트가 막대기를, 비숑이 분홍 뼈다귀 인형을 물고 달립니다. 슬롯 이름이 같으므로 상태와 장면 로직은 견종과 무관하게 동일하게 동작합니다.
+모든 견종은 공통 모션 12종을 공유하고, 그 위에 견종 전용 슬롯(play·react·observe)을 각자의 방식으로 채웁니다. 예를 들어 play 슬롯은 리트리버가 공을, 닥스훈트가 막대기를, 비숑이 분홍 뼈다귀 인형을 물고 달리고, react 슬롯은 리트리버가 고개를 갸웃하고, 닥스훈트가 제 꼬리를 물려고 빙글빙글 돌고, 비숑이 제자리에서 몸을 돌립니다. 슬롯 이름이 같으므로 상태와 장면 로직은 견종과 무관하게 동일하게 동작합니다.
 
 ## 동작 원리
 
@@ -87,6 +101,9 @@ GITHUB_TOKEN=<PAT> GITHUB_USERNAME=<사용자명> node generate.js
 
 # 단위 테스트
 node --test generate.test.js
+
+# README 견종 샘플(samples/) 다시 만들기
+node sample.js
 ```
 
 생성된 `dist/dog.svg`를 브라우저로 열면 애니메이션을 확인할 수 있습니다.
@@ -95,7 +112,8 @@ node --test generate.test.js
 
 1. `assets/<견종>/`에 공통 12종(walk, run, sniff, sleep, rest, bark, lick, bounce, doze, shake, stretch, playbow)과 전용 슬롯 3종(play, react, observe)을 그려 넣습니다. play는 물고 달리는 이동형으로, react와 observe는 제자리 모션으로 만듭니다.
 2. `node normalize.js <견종>`을 실행해 `parts/<견종>/`과 `meta.json`을 생성합니다.
-3. `BREED` 변수에 새 견종 이름을 넣습니다.
+3. `node sample.js`로 README 샘플을 만들고, 위 견종 표와 샘플 목록에 추가합니다.
+4. `BREED` 변수에 새 견종 이름을 넣습니다.
 
 compose.js와 generate.js는 수정할 필요가 없습니다.
 
@@ -103,9 +121,11 @@ compose.js와 generate.js는 수정할 필요가 없습니다.
 
 ```
 assets/<견종>/   모션 원본 SVG (공통 12종 + 전용 슬롯 play·react·observe)
-parts/<견종>/    발바닥 지면 정렬과 id 네임스페이스를 적용한 합성용 부품
-compose.js       장면 합성기 (견종별 부품 로드, 타임라인 배치, 방향 연속성, 화면 경계 검증)
+parts/<견종>/    그림자 기준 지면 정렬, 기준점(anchor), id 네임스페이스를 적용한 합성용 부품
+samples/         README에 싣는 견종별 샘플 장면
+compose.js       장면 합성기 (견종별 부품 로드, 타임라인 배치, 기준점 정렬, 방향 연속성, 화면 경계 검증)
 generate.js      상태 결정과 SVG 생성 (BREED 환경변수로 견종 선택)
 normalize.js     assets/<견종>/ 원본을 parts/<견종>/ 부품으로 정규화
+sample.js        samples/ 견종별 샘플 생성
 publish.sh       output 브랜치 발행
 ```
