@@ -28,16 +28,17 @@ GitHub 잔디로 키우는 픽셀 강아지.
 
 ## 견종
 
-두 견종을 지원하며, 저장소 변수로 하나를 골라 고정합니다.
+세 견종을 지원하며, 저장소 변수로 하나를 골라 고정합니다.
 
-| 견종     | BREED 값    | 특징               |
-| -------- | ----------- | ------------------ |
-| 닥스훈트 | `dachshund` | 긴 허리, 짧은 다리 |
-| 리트리버 | `retriever` | 처진 귀, 깃털 꼬리 |
+| 견종     | BREED 값    | 특징                          |
+| -------- | ----------- | ----------------------------- |
+| 닥스훈트 | `dachshund` | 긴 허리, 짧은 다리            |
+| 리트리버 | `retriever` | 처진 귀, 깃털 꼬리            |
+| 비숑     | `bichon`    | 솜사탕 같은 둥근 머리, 말린 꼬리 |
 
 Settings → Secrets and variables → Actions → **Variables** 탭에서 `BREED` 변수를 만들어 값을 넣으면 강아지가 교체됩니다. 변수를 만들지 않으면 기본값 `dachshund`가 적용됩니다.
 
-두 견종은 공통 모션 12종을 공유하고, 그 위에 견종 전용 슬롯(play·react·observe)을 각자의 방식으로 채웁니다. 예를 들어 play 슬롯은 리트리버가 공을, 닥스훈트가 막대기를 물고 달립니다. 슬롯 이름이 같으므로 상태와 장면 로직은 견종과 무관하게 동일하게 동작합니다.
+모든 견종은 공통 모션 12종을 공유하고, 그 위에 견종 전용 슬롯(play·react·observe)을 각자의 방식으로 채웁니다. 예를 들어 play 슬롯은 리트리버가 공을, 닥스훈트가 막대기를, 비숑이 분홍 뼈다귀 인형을 물고 달립니다. 슬롯 이름이 같으므로 상태와 장면 로직은 견종과 무관하게 동일하게 동작합니다.
 
 ## 동작 원리
 
@@ -93,7 +94,7 @@ node --test generate.test.js
 ## 견종 추가하기
 
 1. `assets/<견종>/`에 공통 12종(walk, run, sniff, sleep, rest, bark, lick, bounce, doze, shake, stretch, playbow)과 전용 슬롯 3종(play, react, observe)을 그려 넣습니다. play는 물고 달리는 이동형으로, react와 observe는 제자리 모션으로 만듭니다.
-2. 정규화 스크립트를 돌려 `parts/<견종>/`을 생성합니다.
+2. `node normalize.js <견종>`을 실행해 `parts/<견종>/`과 `meta.json`을 생성합니다.
 3. `BREED` 변수에 새 견종 이름을 넣습니다.
 
 compose.js와 generate.js는 수정할 필요가 없습니다.
@@ -105,5 +106,6 @@ assets/<견종>/   모션 원본 SVG (공통 12종 + 전용 슬롯 play·react·
 parts/<견종>/    발바닥 지면 정렬과 id 네임스페이스를 적용한 합성용 부품
 compose.js       장면 합성기 (견종별 부품 로드, 타임라인 배치, 방향 연속성, 화면 경계 검증)
 generate.js      상태 결정과 SVG 생성 (BREED 환경변수로 견종 선택)
+normalize.js     assets/<견종>/ 원본을 parts/<견종>/ 부품으로 정규화
 publish.sh       output 브랜치 발행
 ```
