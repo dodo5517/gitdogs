@@ -21,10 +21,10 @@ test('streak milestone: celebrate', () => {
   assert.equal(decideState(S(2, 1, 20, 30), 'u'), 'celebrate');
 });
 test('10+ today: zoomies', () => {
-  assert.equal(decideState(S(20, 1, 30, 3), 'u'), 'zoomies');
+  assert.equal(decideState(S(12, 1, 30, 3), 'u'), 'zoomies');
 });
 test('4-9 today: active', () => {
-  assert.equal(decideState(S(12, 1, 20, 3), 'u'), 'active');
+  assert.equal(decideState(S(6, 1, 20, 3), 'u'), 'active');
 });
 test('1-3 today: normal', () => {
   assert.equal(decideState(S(2, 1, 8, 3), 'u'), 'normal');
@@ -32,11 +32,11 @@ test('1-3 today: normal', () => {
 test('0 today but active week: calm', () => {
   assert.equal(decideState(S(0, 3, 9, 0), 'u'), 'calm');
 });
-test('tier boundaries: 9 vs 10, 19 vs 20', () => {
-  assert.equal(decideState(S(9, 0, 15, 1), 'u'), 'normal');
-  assert.equal(decideState(S(10, 0, 15, 1), 'u'), 'active');
-  assert.equal(decideState(S(19, 0, 25, 1), 'u'), 'active');
-  assert.equal(decideState(S(20, 0, 25, 1), 'u'), 'zoomies');
+test('tier boundaries: 3 vs 4, 9 vs 10', () => {
+  assert.equal(decideState(S(3, 0, 15, 1), 'u'), 'normal');
+  assert.equal(decideState(S(4, 0, 15, 1), 'u'), 'active');
+  assert.equal(decideState(S(9, 0, 25, 1), 'u'), 'active');
+  assert.equal(decideState(S(10, 0, 25, 1), 'u'), 'zoomies');
 });
 test('computeStats: streak survives a commit-less morning', () => {
   const days = [
