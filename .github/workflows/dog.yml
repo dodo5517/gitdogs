@@ -37,7 +37,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
           TZ_OFFSET_HOURS: 9
-          BREED: ${{ vars.BREED || 'dachshund' }} # 견종 선택: dachshund | retriever
+          BREED: ${{ vars.BREED || 'dachshund' }} # 견종 선택: dachshund | retriever | bichon
         run: |
           node generate.js --event push
           bash publish.sh "chore: dog greets"
@@ -49,7 +49,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
           TZ_OFFSET_HOURS: 9
-          BREED: ${{ vars.BREED || 'dachshund' }} # 견종 선택: dachshund | retriever
+          BREED: ${{ vars.BREED || 'dachshund' }} # 견종 선택: dachshund | retriever | bichon
         run: |
           ARGS=""
           if [ -n "${{ github.event.inputs.mock }}" ]; then
