@@ -1,0 +1,62 @@
+{
+  "bark": {
+    "width": 162,
+    "height": 80
+  },
+  "bounce": {
+    "width": 132,
+    "height": 80
+  },
+  "doze": {
+    "width": 120,
+    "height": 92
+  },
+  "lick": {
+    "width": 108,
+    "height": 86
+  },
+  "observe": {
+    "width": 132,
+    "height": 98
+  },
+  "play": {
+    "width": 150,
+    "height": 80
+  },
+  "playbow": {
+    "width": 150,
+    "height": 74
+  },
+  "react": {
+    "width": 132,
+    "height": 92
+  },
+  "rest": {
+    "width": 138,
+    "height": 62
+  },
+  "run": {
+    "width": 132,
+    "height": 80
+  },
+  "shake": {
+    "width": 162,
+    "height": 80
+  },
+  "sleep": {
+    "width": 174,
+    "height": 98
+  },
+  "sniff": {
+    "width": 156,
+    "height": 68
+  },
+  "stretch": {
+    "width": 150,
+    "height": 80
+  },
+  "walk": {
+    "width": 132,
+    "height": 80
+  }
+}

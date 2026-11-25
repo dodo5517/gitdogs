@@ -137,7 +137,7 @@ async function main() {
   const todayISO = now.toISOString().slice(0, 10);
 
   const username = process.env.GITHUB_USERNAME ?? 'mock-user';
-  const breed = process.env.BREED ?? 'dachshund'; // 견종 (dachshund | retriever)
+  const breed = process.env.BREED ?? 'dachshund'; // 견종 (dachshund | retriever | bichon)
   let stats;
   if (mock) {
     stats = mock;
